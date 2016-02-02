@@ -34,7 +34,7 @@ var path = {
       img: 'src/img/**/*.*', 
   },
   watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
-      html: 'src/*.html', 
+      html: 'dist/*.html',
       jade: 'src/**/*.jade', 
       scripts: 'src/js/**/*.js',
       style: [
@@ -131,7 +131,7 @@ gulp.task('browserSync', function() {
 // Если теперь запустить gulp watch, то sass и browserSync запустятся одновременно. 
 // После выполнения обеих задач запустится watch.
 gulp.task('watch', ['browserSync', 'jade', 'sass'], function () {
-	gulp.watch(path.watch.style, ['sass']);
+	gulp.watch(path.watch.style, ['sass' , 'minify-css']);
   // gulp.watch(path.watch.html, ['html']);
   gulp.watch(path.watch.jade, ['jade']);
   gulp.watch(path.watch.img, ['imagemin']);
