@@ -24,14 +24,15 @@ var path = {
       html: 'src/*.html', 
       jade: 'src/*.jade', 
       scripts: [
-      	'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-      	'src/bower_components/jquery/dist/jquery.min.js'
+      	'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js'
+      	//'src/bower_components/jquery/dist/jquery.min.js'
     	],
       style: [
-      	'src/bower_components/bootstrap-sass/assets/stylesheets/bootstrap_custom.scss',
-      	'src/css/*.css'
+      	//'src/bower_components/bootstrap-sass/assets/stylesheets/bootstrap_custom.scss',
+      	'src/css/*.css',
+        'src/css/bootstrap_custom.scss'
       ],
-      img: 'src/img/**/*.*', 
+      img: 'src/img/**/*.*',
   },
   watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
       html: 'dist/*.html',
@@ -39,7 +40,8 @@ var path = {
       scripts: 'src/js/**/*.js',
       style: [
       	'src/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/**/*.scss',
-      	'src/css/*.css'
+      	'src/css/*.css',
+      	'src/css/*.scss'
     	],
       img: 'src/img/**/*.*',
   },
@@ -85,7 +87,7 @@ gulp.task('base_scripts', function(){
 });
 
 gulp.task('sass', function(){
-  gulp.src(path.src.style) // Берет только _bootstrap.scss, другие не компилит
+  gulp.src(path.src.style)
   // .pipe(debug({title: "sass;"}))
   .pipe(sass().on('error', sass.logError))
   .pipe(autoprefixer('last 5 versions'))
