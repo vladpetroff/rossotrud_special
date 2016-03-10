@@ -1,6 +1,6 @@
 ;$(function(){
 	"use strict";
-	console.log("in main.js!");
+	console.log("in main.JS!");
 
 	/* Calendar */
 	$('.datetimepicker').datetimepicker({locale: 'ru'});
@@ -17,9 +17,6 @@
 	    slideMargin: 10
 	});
 
-	/* lightbox */
-	$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-	    event.preventDefault();
-	    $(this).ekkoLightbox();
-	});
+	/* fancybox */
+	$(".fancybox").fancybox();
 });

@@ -22,8 +22,8 @@ block prepend css
 	// bxSlider http://bxslider.com/examples/carousel-dynamic-number-slides
 	+styles('jquery.bxslider.css')
 
-	// lightbox http://ashleydw.github.io/lightbox/
-	+styles('ekko-lightbox.css')
+	// fancybox http://fancyapps.com/fancybox/
+	+styles('jquery.fancybox.css')
 
 block content
 	.container
@@ -71,7 +71,7 @@ block content
 
 		// lightbox
 		.well
-			include includes/_lightbox
+			include includes/_fancybox
 		
 		// form elements
 		.well
@@ -98,5 +98,5 @@ block prepend scripts
 	// bxSlider
 	script(src="./js/jquery.bxslider.min.js" defer)
 
-	// lightbox
-	script(src="./js/ekko-lightbox.min.js" defer)
+	// fancybox
+	script(src="./js/jquery.fancybox.pack.js" defer)
