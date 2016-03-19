@@ -48,7 +48,27 @@ block content
 					| @include img-retina($file-1x; $file-2x; $width-1x; $height-1x);
 					| @include center-block();
 					.center-block
-		
+
+			.col-xs-12
+				.well
+					nav
+						ul.pagination
+							li
+								a(href="javascript:;", aria-label="Previous")
+									span(aria-hidden="true") &laquo;
+							li
+								a(href="javascript:;") 1
+							li
+								a(href="javascript:;") 2
+							li
+								a(href="javascript:;") 3
+							li
+								a(href="javascript:;") 4
+							li
+								a(href="javascript:;") 5
+							li
+								a(href="javascript:;", aria-label="Next")
+									span(aria-hidden="true") &raquo;
 		.row
 			// animation
 			.col-xs-4
