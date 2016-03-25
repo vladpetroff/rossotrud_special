@@ -1,5 +1,22 @@
+//import Menu from './menu';
+
 ;$(function(){
 	"use strict";
+
+	//new Menu({
+	//	title: "Раскрывающееся меню",
+	//	template: _.template(document.getElementById('menu-template').innerHTML),
+	//	listTemplate: _.template(document.getElementById('menu-list-template').innerHTML),
+	//	items: {
+	//		"donut": "Пончик",
+	//		"cake": "Пирожное",
+	//		"chocolate": "Шоколадка"
+	//	}
+	//});
+	//
+	//document.body.appendChild(menu.getElem());
+
+
 	console.log("in main.JS!");
 
 	/* Calendar */

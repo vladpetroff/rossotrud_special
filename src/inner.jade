@@ -25,6 +25,26 @@ block prepend css
 	// fancybox http://fancyapps.com/fancybox/
 	+styles('jquery.fancybox.css')
 
+
+//- Дополнительные скрипты для отдельных страниц
+block prepend scripts
+	// Элементы форм  http://silviomoreto.github.io/bootstrap-select/
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js" defer)
+
+	// Календарь
+	script(src="./js/moment-with-locales.min.js" defer)
+	script(src="./js/bootstrap-datetimepicker.min.js" defer)
+
+	// Слайдеры-ползунки
+	script(src="./js/bootstrap-slider.js" defer)
+
+	// bxSlider
+	script(src="./js/jquery.bxslider.min.js" defer)
+
+	// fancybox
+	script(src="./js/jquery.fancybox.pack.js" defer)
+
+
 block content
 	.container
 		.row
@@ -103,20 +123,3 @@ block content
 		// carousel
 		include includes/_carousel
 
-//- Дополнительные скрипты для отдельных страниц
-block prepend scripts
-	// Элементы форм  http://silviomoreto.github.io/bootstrap-select/
-	script(src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js" defer)
-
-	// Календарь
-	script(src="./js/moment-with-locales.min.js" defer)
-	script(src="./js/bootstrap-datetimepicker.min.js" defer)
-
-	// Слайдеры-ползунки
-	script(src="./js/bootstrap-slider.js" defer)
-
-	// bxSlider
-	script(src="./js/jquery.bxslider.min.js" defer)
-
-	// fancybox
-	script(src="./js/jquery.fancybox.pack.js" defer)

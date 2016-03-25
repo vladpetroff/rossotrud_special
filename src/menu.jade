@@ -1,0 +1,24 @@
+extends includes/template
+
+block title
+	title menu.html
+
+block prepend scripts
+	// Меню
+	//script(src="./js/menu.js" defer)
+
+block content
+	h2 Раскрывающееся меню
+
+	.menu
+		span.title
+
+	//Виджет Меню: шаблоны
+	//script(type="text/template", id="menu-template").
+	//	.menu
+	//		span.title #{title}
+	//
+	//script(type="text/template", id="menu-list-template").
+	//	ul
+	//		each key in items
+	//			li:a(href="#{key}") #{items[key]}
