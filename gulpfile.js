@@ -56,13 +56,15 @@ const path = {
 			'src/css/*.scss'
 		],
 		style: 'src/css/*.css',
-		img: 'src/img/**/*.*'
+		img: 'src/img/**/*.*',
+		imgcomponents: 'public/js/img/**/*.*'
 	},
 	clean: { // Файлы, которые нужно удалить после сборки
 		map: 'public/css/*.map',
 		jsmap: 'public/js/*.map',
 		includes: 'public/includes',
-		modules: 'public/js/modules'
+		modules: 'public/js/modules',
+		imgcomponents: 'public/js/img'
 	}
 };
 
@@ -120,6 +122,19 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest(path.public.style))
 });
 
+gulp.task('imgcomponents', function () {
+	return gulp.src(path.watch.imgcomponents)
+		.pipe(plumber({
+			errorHandler: notify.onError(function(err) {
+				return {
+					title: 'imgcomponents',
+					message: err.message
+				};
+			})
+		}))
+		.pipe(gulp.dest(path.public.img))
+})
+
 gulp.task('webpack', function(callback) {
 	// сигнализируем об окончании сборки, чтоб не подвешивать поток
 	let firstBuildReady = false;
@@ -137,40 +152,59 @@ gulp.task('webpack', function(callback) {
 	}
 
 	let options = {
-		output: {
-			publicPath: '/js/' // необходимо для динамической подгрузки скриптов
-		},
+		//entry: "src/js/**/*.js",
+		//output: {
+		//	path: __dirname + '/public/new',
+		//	filename: "main.js"
+		//},
 
 		watch: true,
-		devtool: 'source-map',
+		//devtool: 'source-map',
 
 		/* loader - это то, что преобразовывает файлы */
 		module: {
-			loaders: [{
-					test: /\.js$/,
-					include: wpath.join(__dirname, path.watch.scripts),
+			loaders: [
+				{
+					test: /\.js?$/,
+					include: wpath.resolve(__dirname),
 					exclude: /(node_modules|bower_components)/,
-					//loader:  'babel?presets[]=es2015'
-					loader: 'babel',
+					loader: "babel",
 					query: {
 						presets: ['es2015'],
-						plugins: ['transform-runtime']
+						plugins: ['transform-es2015-modules-commonjs']
 					}
+				},
+				{
+					test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
+					//loader: 'file?name=[path][name].[ext]'
+					loader: 'file?name='+'./img/imgComponents/'+'[name].[ext]'
+				},{
+					test: /\.jade/,
+					loader: 'jade'
+				},
+				{
+					test: /\.scss$/,
+					loader: 'style!css!resolve-url!sass'  // необходимо установить все эти лоадеры
 				}
-				//,
-				//{
-				//	test: /\.jade/,
-				//	loader: 'jade'
-				//}
 			]
 		},
 
 		plugins: [
-			new webpack.optimize.UglifyJsPlugin({
-				compress: {
-					warnings: false
-				}
-			})
+			//new webpack.optimize.UglifyJsPlugin({
+			//	compress: {
+			//		warnings: false
+			//	}
+			//})
+
+			/* Выносим общие куски файлов js в отдельный common.js */
+			/* https://www.youtube.com/watch?v=aET3GxoHBug&list=PLDyvV36pndZHfBThhg4Z0822EEG9VGenn&index=14 */
+			//new webpack.optimize.CommonsChunkPlugin({
+			//	name: "common",
+			//  minChunks: 2  // выносит общие модули, если их используют мин. 2 файла js
+			//}),
+
+			/* Если ошибка, сборку останавливаем */
+			new webpack.NoErrorsPlugin()
 		]
 	};
 
@@ -199,7 +233,7 @@ gulp.task('assets', function () {
 });
 
 gulp.task('clean', function () {
-	return del([path.clean.includes, path.clean.jsmap, path.clean.map, path.clean.modules]);
+	return del([path.clean.includes, path.clean.jsmap, path.clean.map, path.clean.modules, path.clean.imgcomponents]);
 });
 
 gulp.task('minify-css', function () {
@@ -253,10 +287,11 @@ gulp.task('watch', function() {
 	//gulp.watch(path.watch.scripts, gulp.series('scripts'));
 	gulp.watch(path.watch.jade, gulp.series('jade'));
 	gulp.watch(path.watch.img, gulp.series('imagemin'));
+	gulp.watch(path.watch.imgcomponents, gulp.series('imgcomponents'));
 });
 
 gulp.task('default', gulp.series(
-	gulp.parallel('jade', 'assets', 'sass', 'imagemin', 'webpack'),
+	gulp.parallel('jade', 'assets', 'sass', 'imgcomponents', 'imagemin', 'webpack'),
 	gulp.parallel('browserSync', 'watch')
 	)
 );
