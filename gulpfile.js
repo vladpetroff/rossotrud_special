@@ -32,7 +32,7 @@ const gulplog = require('gulplog');
 const path = {
 	public: { //Тут мы укажем куда складывать готовые после сборки файлы
 		html: 'public/',
-		jade: 'public/',
+		jade: 'src/*.jade',
 		scripts: 'public/js/',
 		style: 'public/css/',
 		fonts: 'public/fonts/',
@@ -51,6 +51,7 @@ const path = {
 	watch: { // Укажем, за изменением каких файлов мы хотим наблюдать
 		html: 'public/*.html',
 		jade: 'src/**/*.jade',
+		//jadeIncl: 'src/includes/*.jade',
 		scripts: 'src/js/*.js', // только скрипты верхнего уровня
 		sass: [
 			'src/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/**/*.scss',
@@ -72,8 +73,8 @@ const path = {
 /************************************************/
 
 gulp.task('jade', function () {
-	return gulp.src(path.watch.jade)
-		// .pipe(debug({title: "jade;"}))
+	return gulp.src(path.public.jade)
+		.pipe(debug({title: "jade;"}))
 		.pipe(plumber({
 			errorHandler: notify.onError(function(err) {
 				return {
@@ -85,24 +86,10 @@ gulp.task('jade', function () {
 		.pipe(jade({
 			pretty: true
 		}))
-		.pipe(newer(path.public.jade))
-		.pipe(gulp.dest(path.public.jade))
-});
-
-gulp.task('html', function () {
-	return gulp.src(path.watch.html, {since: gulp.lastRun('html')})
-		// .pipe(rigger())  // сборка футера, хидера,...
-		.pipe(plumber({
-			errorHandler: notify.onError(function(err) {
-				return {
-					title: 'HTML',
-					message: err.message
-				};
-			})
-		}))
-		.pipe(newer(path.public.html))
+		//.pipe(newer(path.public.jade))
 		.pipe(gulp.dest(path.public.html))
 });
+
 
 gulp.task('sass', function () {
 	return gulp.src(path.watch.sass) //, {since: gulp.lastRun('sass')}

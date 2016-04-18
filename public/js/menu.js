@@ -89,7 +89,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	__webpack_require__(4);
@@ -103,24 +103,24 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var Menu = function Menu(options) {
-	  var _this = this;
+	    var _this = this;
 
-	  _classCallCheck(this, Menu);
+	    _classCallCheck(this, Menu);
 
-	  this.elem = document.createElement('div');
-	  this.elem.className = 'menu';
+	    this.elem = document.createElement('div');
+	    this.elem.className = 'menu';
 
-	  this.elem.innerHTML = (0, _menu2.default)(options) || document.createElement('span');
+	    this.elem.innerHTML = (0, _menu2.default)(options) || document.createElement('span');
 
-	  this.titleElem = this.elem.querySelector('.title');
+	    this.titleElem = this.elem.querySelector('.title');
 
-	  this.titleElem.onclick = function () {
-	    return _this.elem.classList.toggle('open');
-	  };
+	    this.titleElem.onclick = function () {
+	        return _this.elem.classList.toggle('open');
+	    };
 
-	  this.titleElem.onmousedown = function () {
-	    return false;
-	  };
+	    this.titleElem.onmousedown = function () {
+	        return false;
+	    };
 	};
 
 	exports.default = Menu;
