@@ -22,7 +22,7 @@ const webpackStream  = require('webpack-stream');
 const webpack = webpackStream.webpack;
 const wpath = require('path');
 const autoprefixer = require('gulp-autoprefixer');  //https://www.npmjs.com/package/gulp-autoprefixer/
-const minifyCSS = require('gulp-minify-css');  //https://www.npmjs.com/package/gulp-minify-css
+const cleanCSS = require('gulp-clean-css');  //https://github.com/scniro/gulp-clean-css
 const named = require('vinyl-named');  //определяет какой файл в какую сборку по названию
 const gulplog = require('gulplog');
 //const svgSprite = require('gulp-svg-sprite'); //https://www.youtube.com/watch?v=VqYAitDKbpo&list=PLDyvV36pndZFLTE13V4qNWTZbeipNhCgQ&index=13
@@ -238,13 +238,13 @@ gulp.task('clean', function () {
 	return del([path.clean.includes, path.clean.jsmap, path.clean.map, path.clean.modules, path.clean.imgcomponents]);
 });
 
-gulp.task('minify-css', function () {
+gulp.task('clean-css', function () {
 	return gulp.src('public/css/style.css')
-		//.pipe(debug({title: "minifyCSS;"}))
+		//.pipe(debug({title: "cleanCSS;"}))
 		.pipe(uncss({
 			html: [path.watch.html]
 		}))
-		.pipe(minifyCSS({keepBreaks: false}))
+		.pipe(cleanCSS({compatibility: 'ie8'}))
 		//.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest(path.public.style))
 });
@@ -300,5 +300,5 @@ gulp.task('default', gulp.series(
 
 gulp.task('build', gulp.series(
 	'clean',
-	gulp.parallel('imagemin', 'minify-css'))
+	gulp.parallel('imagemin', 'clean-css'))
 );
