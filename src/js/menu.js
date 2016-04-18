@@ -4,6 +4,8 @@ import Menu from './menuComponent';
 
 //debugger;
 
+//let menu = new Menu(options);
+
 let menu = new Menu({
 	title: "Раскрывающееся меню",
 	items: [{
@@ -13,9 +15,11 @@ let menu = new Menu({
 		text: 'Мясо',
 		href: '#meat'
 	}, {
-		text: '99% еды - бамбук!',
+		text: '90% еды - бамбук!',
 		href: '#bamboo'
 	}]
 });
+
+console.log( menu );
 
 document.body.appendChild(menu.elem);

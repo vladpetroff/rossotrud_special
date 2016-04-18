@@ -8,7 +8,7 @@ export default class Menu {
     this.elem = document.createElement('div');
     this.elem.className = 'menu';
 
-    this.elem.innerHTML = template(options);
+    this.elem.innerHTML = template(options) || document.createElement('span');
 
     this.titleElem = this.elem.querySelector('.title');
 

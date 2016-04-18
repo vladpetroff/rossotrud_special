@@ -7,6 +7,7 @@ const debug = require('gulp-debug');  //https://www.npmjs.com/package/gulp-debug
 const imagemin = require('gulp-imagemin'); //https://www.npmjs.com/package/gulp-imagemin/
 const rename = require('gulp-rename');  //https://www.npmjs.com/package/gulp-rename/
 const browserSync = require("browser-sync").create();  //https://www.npmjs.com/package/browser-sync
+const reload = browserSync.reload;
 const uncss = require('gulp-uncss'); // Удаляет неиспользуемые стили. https://www.npmjs.com/package/gulp-uncss/
 const sourcemaps = require('gulp-sourcemaps');  //https://www.npmjs.com/package/gulp-sourcemaps
 const del = require('del'); // Удаляет файлы. https://www.npmjs.com/package/del
@@ -44,7 +45,7 @@ const path = {
 			//'src/bower_components/jquery/public/jquery.min.js'
 		],
 		style: 'assets/css/*.css',
-		fonts: 'src/fonts/**/*.*',
+		fonts: 'assets/fonts/*.*',
 		assets: 'assets/**/*.*'
 	},
 	watch: { // Укажем, за изменением каких файлов мы хотим наблюдать
@@ -104,7 +105,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('sass', function () {
-	return gulp.src(path.watch.sass, {since: gulp.lastRun('sass')})
+	return gulp.src(path.watch.sass) //, {since: gulp.lastRun('sass')}
 		//.pipe(debug({title: "sass;"}))
 		.pipe(plumber({
 			errorHandler: notify.onError(function(err) {
@@ -119,6 +120,7 @@ gulp.task('sass', function () {
 		.pipe(sass())
 		.pipe(autoprefixer('last 5 versions'))
 		.pipe(sourcemaps.write('.'))  // заполняем sourcemap и кладем в тот же каталог отдельно
+		.pipe(debug({title: "sass:"}))
 		.pipe(gulp.dest(path.public.style))
 });
 
@@ -292,7 +294,7 @@ gulp.task('watch', function() {
 
 gulp.task('default', gulp.series(
 	gulp.parallel('jade', 'assets', 'sass', 'imgcomponents', 'imagemin', 'webpack'),
-	gulp.parallel('browserSync', 'watch')
+	gulp.parallel('watch', 'browserSync')
 	)
 );
 

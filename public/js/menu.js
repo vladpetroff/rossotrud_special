@@ -62,10 +62,10 @@
 
 	//debugger;
 
+	//let menu = new Menu(options);
+
 	var menu = new _menuComponent2.default({
 		title: "Раскрывающееся меню",
-		//template: _.template(document.getElementById('menu-template').innerHTML),
-		//listTemplate: _.template(document.getElementById('menu-list-template').innerHTML),
 		items: [{
 			text: 'Яйца',
 			href: '#eggs'
@@ -73,10 +73,12 @@
 			text: 'Мясо',
 			href: '#meat'
 		}, {
-			text: '99% еды - бамбук!',
+			text: '90% еды - бамбук!',
 			href: '#bamboo'
 		}]
 	});
+
+	console.log(menu);
 
 	document.body.appendChild(menu.elem);
 
@@ -108,7 +110,7 @@
 	  this.elem = document.createElement('div');
 	  this.elem.className = 'menu';
 
-	  this.elem.innerHTML = (0, _menu2.default)(options);
+	  this.elem.innerHTML = (0, _menu2.default)(options) || document.createElement('span');
 
 	  this.titleElem = this.elem.querySelector('.title');
 
@@ -158,7 +160,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n\n.menu ul {\n  display: none;\n  margin: 0;\n}\n\n.menu .title {\n  font-weight: bold;\n  cursor: pointer;\n}\n\n.menu .title:before {\n  content: '\\25B6';\n  padding-right: 6px;\n  color: green;\n}\n\n.menu.open ul {\n  display: block;\n}\n\n.menu.open .title:before {\n  content: '\\25BC';\n}\n\n.menu {\n  background: url(" + __webpack_require__(7) + ") no-repeat;\n}", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n\n.menu ul {\n  display: none;\n  margin: 0;\n}\n\n.menu .title {\n  font-weight: bold;\n  cursor: pointer;\n}\n\n.menu .title:before {\n  content: '\\25B6';\n  padding-right: 6px;\n  color: green;\n}\n\n.menu.open ul {\n  display: block;\n}\n\n.menu.open .title:before {\n  content: '\\25BC';\n}\n\n.menu {\n  background: url(" + __webpack_require__(7) + ") no-repeat top right;\n}", ""]);
 
 	// exports
 
