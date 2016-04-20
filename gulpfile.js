@@ -36,6 +36,7 @@ const path = {
 		scripts: 'public/js/',
 		style: 'public/css/',
 		fonts: 'public/fonts/',
+		assets: 'public/',
 		img: 'public/img/'
 	},
 	src: { // Пути откуда копируем исходники
@@ -57,6 +58,7 @@ const path = {
 			'src/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/**/*.scss',
 			'src/css/*.scss'
 		],
+		assets: 'assets/**/*.*',
 		style: 'src/css/*.css',
 		img: 'src/img/**/*.*',
 		imgcomponents: 'public/js/img/**/*.*'
@@ -275,6 +277,7 @@ gulp.task('watch', function() {
 	gulp.watch(path.watch.sass, gulp.series('sass'));
 	//gulp.watch(path.watch.scripts, gulp.series('scripts'));
 	gulp.watch(path.watch.jade, gulp.series('jade'));
+	gulp.watch(path.watch.assets, gulp.series('assets'));
 	gulp.watch(path.watch.img, gulp.series('imagemin'));
 	gulp.watch(path.watch.imgcomponents, gulp.series('imgcomponents'));
 });
