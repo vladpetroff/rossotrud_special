@@ -55,33 +55,91 @@
 
 	;$(function () {
 
-		console.log("in main.js!");
+		var popped = document.querySelector('.popped');
+		var poppedTrigger = document.querySelector('.a-settings a');
 
-		/* Calendar */
-		if ($.fn.datetimepicker) {
-			$('.datetimepicker').datetimepicker({ locale: 'ru' });
-			$('.datepicker').datetimepicker({ locale: 'ru', format: 'DD.MM.YYYY' });
+		poppedTrigger.onclick = function () {
+			popped.classList.toggle('hidden');
+		};
+		document.querySelector('.closepopped').onclick = function () {
+			popped.classList.add('hidden');
+		};
+
+		// cookies https://github.com/js-cookie/js-cookie
+		var settings = document.getElementById('settings');
+		var objCookies = {};
+		var objProp = ['chooseColor', 'letter-spacing', 'font-family', 'fontSize'];
+		var initialBodyClasses = 'sans-serif spacing-small color1 font14';
+		var resizeBlock = document.querySelector('.page');
+		//var currentPageSize = parseInt(getComputedStyle(resizeBlock).fontSize);
+		var currentPageSize = +Cookies.get('fontSize').slice(4, 6);
+		//currentPageSize = currentPageSize;
+		console.log(currentPageSize);
+
+		initCookies();
+
+		function initCookies() {
+			var cookies = Cookies.get();
+			for (var key in cookies) {
+				objProp.filter(function (item) {
+					if (item === key) {
+						objCookies[key] = cookies[key];
+					}
+				});
+			}
+			applyCookieClass();
 		}
 
-		/* Слайдеры-ползунки */
-		if ($.fn.slider) {
-			$('#slider').slider({});
+		function setCookies(target) {
+			var attributeForCookie = target.getAttribute('rel');
+			var classNameForCookie = target.className;
+
+			objCookies[classNameForCookie] = attributeForCookie;
+			Cookies.set(classNameForCookie, attributeForCookie);
+			applyCookieClass();
 		}
 
-		/* bxSlider */
-		if ($.fn.bxSlider) {
-			$('.bxslider').bxSlider({
-				slideWidth: 150,
-				minSlides: 1,
-				maxSlides: 6,
-				slideMargin: 10
-			});
+		function applyCookieClass() {
+			document.body.className = '';
+			for (var key in objCookies) {
+				document.body.classList.add(objCookies[key]);
+			}
 		}
 
-		/* fancybox */
-		if ($.fn.fancybox) {
-			$(".fancybox").fancybox();
-		}
+		settings.onclick = function (e) {
+			var target = e.target;
+			if (target.nodeName === 'A' && target.hasAttribute('rel')) {
+				setCookies(target);
+			}
+			if (target.classList.contains('a-fontsize-big')) {
+				if (currentPageSize < 18) {
+					console.log(currentPageSize);
+					currentPageSize += 2;
+					console.log(currentPageSize);
+					Cookies.set('fontSize', 'font' + currentPageSize);
+					resizeBlock.style.fontSize = currentPageSize + 'px';
+					objCookies['fontSize'] = 'font' + currentPageSize;
+					applyCookieClass();
+				}
+			}
+			if (target.classList.contains('a-fontsize-small')) {
+				if (currentPageSize > 14) {
+					currentPageSize -= 2;
+					console.log(currentPageSize);
+					Cookies.set('fontSize', 'font' + currentPageSize);
+					resizeBlock.style.fontSize = currentPageSize + 'px';
+					objCookies['fontSize'] = 'font' + currentPageSize;
+					applyCookieClass();
+				}
+			}
+			if (target.classList.contains('default')) {
+				document.body.className = initialBodyClasses;
+				Cookies.set('chooseColor', 'color1');
+				Cookies.set('letter-spacing', 'spacing-small');
+				Cookies.set('font-family', 'sans-serif');
+				Cookies.set('fontSize', 'font14');
+			}
+		};
 	});
 
 /***/ }

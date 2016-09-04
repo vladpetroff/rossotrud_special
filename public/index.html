@@ -14,23 +14,63 @@
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
     <!--script(src="./js/menu.js" defer)-->
+    <!-- https://github.com/js-cookie/js-cookie-->
+    <script src="./js/js.cookie.js" defer></script>
     <script src="./js/main.js" defer></script>
   </head>
 </html>
-<body>
-  <ul>
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="inner.html">Внутренняя</a></li>
-  </ul>
-  <nav class="navbar navbar-default">
-    <div class="navbar-header">
-      <button type="button" data-toggle="collapse" data-target="#navbar-collapsed" aria-expanded="false" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span><span class="sr-only">Toggle navigation</span></button>
+<body class="sans-serif spacing-small color1 font14">
+  <div id="out" class="container">
+    <div id="settings" class="row">
+      <div class="col-xs-12">
+        <h2 class="text_only">Настройки отображения</h2>
+        <div class="access">
+          <dl class="a-fontsize">
+            <dt>Размер шрифта</dt>
+            <dd><a href="#" class="a-fontsize-small">A</a></dd>
+            <dd><a href="#" class="a-fontsize-big">A</a></dd>
+          </dl>
+          <dl class="a-colors">
+            <dt>Цвет</dt>
+            <dd><a id="a-color1" href="#" rel="color1" class="chooseColor">Ц</a></dd>
+            <dd><a id="a-color2" href="#" rel="color2" class="chooseColor">Ц</a></dd>
+            <dd><a id="a-color3" href="#" rel="color3" class="chooseColor">Ц</a></dd>
+          </dl>
+          <p class="a-settings">Настройки <a href="#" aria-hidden="true" class="fa fa-cog fa-lg"></a></p>
+          <p class="a-search">Поиск <a href="/search" aria-hidden="true" class="fa fa-search"></a></p>
+          <div class="popped hidden">
+            <h2>Настройки шрифта:</h2>
+            <p class="choose-font-family"><span>Выберите шрифт</span><a id="sans-serif" rel="sans-serif" href="#" class="font-family">Arial</a><a id="serif" rel="serif" href="#" class="font-family">Times New Roman</a></p>
+            <p class="choose-letter-spacing"><span>Интервал между буквами</span><a id="spacing-small" rel="spacing-small" href="#" class="letter-spacing">Стандартный</a><a id="spacing-normal" rel="spacing-normal" href="#" class="letter-spacing">Средний</a><a id="spacing-big" rel="spacing-big" href="#" class="letter-spacing">Большой</a></p>
+            <h2>Выбор цветовой схемы:</h2>
+            <ul class="choose-colors">
+              <li id="color1"><a rel="color1" href="#" class="chooseColor">Черный по белому</a></li>
+              <li id="color2"><a rel="color2" href="#" class="chooseColor">Белый по черному</a></li>
+              <li id="color3"><a rel="color3" href="#" class="chooseColor">Черный по голубому</a></li>
+            </ul>
+            <p class="saveit"><a href="#" class="default">Вернуть стандартные настройки</a><a href="#" class="closepopped">Закрыть панель</a></p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="navbar-collapsed" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="inner.html">Внутренняя</a></li>
-      </ul>
+    <div class="row page">
+      <div class="col-xs-12">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="inner.html">Внутренняя</a></li>
+        </ul>
+        <nav class="navbar navbar-default">
+          <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#navbar-collapsed" aria-expanded="false" class="navbar-toggle collapsed"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span><span class="sr-only">Toggle navigation</span></button>
+          </div>
+          <div id="navbar-collapsed" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="inner.html">Внутренняя</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </div>
-  </nav>
+  </div>
 </body>

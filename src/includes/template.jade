@@ -21,7 +21,61 @@ html(lang="en")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js")
 
 		block scripts
+			// https://github.com/js-cookie/js-cookie
+			script(src="./js/js.cookie.js" defer)
 			script(src="./js/main.js" defer)
-body
-	block content
+body.sans-serif.spacing-small.color1.font14
+	.container#out
+		.row#settings
+			.col-xs-12
+				h2.text_only Настройки отображения
+
+				.access
+					dl.a-fontsize
+						dt Размер шрифта
+						dd
+							a.a-fontsize-small(href='#') A
+						dd
+							a.a-fontsize-big(href='#') A
+					dl.a-colors
+						dt Цвет
+						dd
+							a#a-color1.chooseColor(href='#', rel='color1') Ц
+						dd
+							a#a-color2.chooseColor(href='#', rel='color2') Ц
+						dd
+							a#a-color3.chooseColor(href='#', rel='color3') Ц
+					p.a-settings Настройки #[a(href="#", aria-hidden="true").fa.fa-cog.fa-lg]
+					p.a-search Поиск #[a(href='/search', aria-hidden="true").fa.fa-search]
+
+					.popped.hidden
+						h2 Настройки шрифта:
+						p.choose-font-family
+							span Выберите шрифт
+							a#sans-serif.font-family(rel='sans-serif', href='#') Arial
+							a#serif.font-family(rel='serif', href='#') Times New Roman
+						p.choose-letter-spacing
+							span Интервал между буквами
+							a#spacing-small.letter-spacing(rel='spacing-small', href='#') Стандартный
+							a#spacing-normal.letter-spacing(rel='spacing-normal', href='#') Средний
+							a#spacing-big.letter-spacing(rel='spacing-big', href='#') Большой
+						h2 Выбор цветовой схемы:
+						ul.choose-colors
+							li#color1
+								a(rel='color1', href='#').chooseColor Черный по белому
+							li#color2
+								a(rel='color2', href='#').chooseColor Белый по черному
+							li#color3
+								a(rel='color3', href='#').chooseColor Черный по голубому
+
+						p.saveit
+							a.default(href='#') Вернуть стандартные настройки
+							a.closepopped(href='#') Закрыть панель
+
+
+
+
+		.row.page
+			.col-xs-12
+				block content
 
