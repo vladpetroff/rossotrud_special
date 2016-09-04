@@ -71,12 +71,10 @@
 		var objProp = ['chooseColor', 'letter-spacing', 'font-family', 'fontSize'];
 		var initialBodyClasses = 'sans-serif spacing-small color1 font14';
 		var resizeBlock = document.querySelector('.page');
-		//var currentPageSize = parseInt(getComputedStyle(resizeBlock).fontSize);
-		var currentPageSize = +Cookies.get('fontSize').slice(4, 6);
-		//currentPageSize = currentPageSize;
-		console.log(currentPageSize);
 
 		initCookies();
+
+		var currentPageSize = +Cookies.get('fontSize').slice(4, 6);
 
 		function initCookies() {
 			var cookies = Cookies.get();
