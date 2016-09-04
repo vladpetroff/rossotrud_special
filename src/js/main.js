@@ -22,6 +22,8 @@
 
 	initCookies();
 
+	console.log( Cookies.get() );
+
 	var currentPageSize = +Cookies.get('fontSize').slice(4,6);
 
 	function initCookies() {
