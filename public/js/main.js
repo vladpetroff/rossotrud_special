@@ -55,6 +55,20 @@
 
 	;$(function () {
 
+		/* autocomplete */
+
+		// Ajax lookup:
+		//$('.searchField input').autocomplete({
+		//	serviceUrl: 'http://rossot.vmb.co:14180/api/suggestions/search?'
+		//});
+
+		// Local lookup (no ajax):
+		var searchQuery = [{ value: 'образование в россии' }, { value: 'обратная связь' }, { value: 'обращение в россотрудничество' }, { value: 'образ' }];
+		$('.searchField input').autocomplete({
+			autoSelectFirst: true,
+			lookup: searchQuery
+		});
+
 		var popped = document.querySelector('.popped');
 		var poppedTrigger = document.querySelector('.a-settings a');
 
@@ -79,6 +93,9 @@
 		var currentPageSize;
 
 		//Cookies.remove('chooseColor');
+		//Cookies.remove('letter-spacing');
+		//Cookies.remove('font-family');
+		//Cookies.remove('fontSize');
 
 		initCookies();
 
@@ -92,7 +109,7 @@
 		// reading current cookies and creating objCookies{}
 		function initCookies() {
 			var cookies = Cookies.get();
-			console.log(objCookies);
+
 			for (var key in cookies) {
 				styles.filter(function (style) {
 					if (style === key) {
@@ -100,7 +117,7 @@
 					}
 				});
 			}
-			console.log(objCookies);
+
 			applyCookieClass();
 		}
 
@@ -120,9 +137,7 @@
 			}
 			if (target.classList.contains('a-fontsize-big')) {
 				if (currentPageSize < 18) {
-					console.log(currentPageSize);
 					currentPageSize += 2;
-					console.log(currentPageSize);
 					Cookies.set('fontSize', 'font' + currentPageSize);
 					resizeBlock.style.fontSize = currentPageSize + 'px';
 					objCookies['fontSize'] = 'font' + currentPageSize;
@@ -132,7 +147,6 @@
 			if (target.classList.contains('a-fontsize-small')) {
 				if (currentPageSize > 14) {
 					currentPageSize -= 2;
-					console.log(currentPageSize);
 					Cookies.set('fontSize', 'font' + currentPageSize);
 					resizeBlock.style.fontSize = currentPageSize + 'px';
 					objCookies['fontSize'] = 'font' + currentPageSize;
