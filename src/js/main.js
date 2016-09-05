@@ -25,7 +25,14 @@
 
 	console.log( Cookies.get() );
 
-	currentPageSize = +Cookies.get('fontSize').slice(4,6) || 14;
+	if (Cookies.get('fontSize')) {
+		currentPageSize = +Cookies.get('fontSize').slice(4,6);
+	} else {
+		currentPageSize = 14;
+	}
+
+	console.log( currentPageSize );
+
 
 	function initCookies() {
 		var cookies = Cookies.get();
