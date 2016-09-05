@@ -15,46 +15,45 @@
 
 	// cookies https://github.com/js-cookie/js-cookie
 	let settings = document.getElementById('settings');
-	var objCookies = {};
-	var objProp = ['chooseColor', 'letter-spacing', 'font-family', 'fontSize'];
+	var objCookies = {
+		'chooseColor' : 'color1',
+		'letter-spacing' : 'spacing-small',
+		'font-family' : 'sans-serif',
+		'fontSize' : 'font14'
+	};
+	var styles = ['chooseColor', 'letter-spacing', 'font-family', 'fontSize'];
 	var initialBodyClasses = 'sans-serif spacing-small color1 font14';
 	var resizeBlock = document.querySelector('.page');
 	var currentPageSize;
 
+	//Cookies.remove('chooseColor');
+
 	initCookies();
 
-	console.log( Cookies.get() );
 
+	// reading current font-size
 	if (Cookies.get('fontSize')) {
 		currentPageSize = +Cookies.get('fontSize').slice(4,6);
 	} else {
 		currentPageSize = 14;
 	}
 
-	console.log( currentPageSize );
-
-
+	// reading current cookies and creating objCookies{}
 	function initCookies() {
 		var cookies = Cookies.get();
+		console.log( objCookies );
 		for(var key in cookies) {
-			objProp.filter(function(item) {
-				if (item === key) {
+			styles.filter(function(style) {
+				if (style === key) {
 					objCookies[key] = cookies[key];
 				}
 			})
 		}
+		console.log( objCookies );
 		applyCookieClass();
 	}
 
-	function setCookies(target) {
-		let attributeForCookie = target.getAttribute('rel');
-		let classNameForCookie = target.className;
-
-		objCookies[classNameForCookie] = attributeForCookie;
-		Cookies.set(classNameForCookie, attributeForCookie);
-		applyCookieClass();
-	}
-
+	// applying saved cookies to body
 	function applyCookieClass() {
 		document.body.className = '' ;
 		for(var key in objCookies) {
@@ -62,6 +61,7 @@
 		}
 	}
 
+	// clicking on settings
 	settings.onclick = function(e) {
 		let target = e.target;
 		if (target.nodeName === 'A' && target.hasAttribute('rel')) {
@@ -96,6 +96,16 @@
 			Cookies.set('fontSize', 'font14');
 		}
 	};
+
+	// changing cookie from clicking
+	function setCookies(target) {
+		let attributeForCookie = target.getAttribute('rel');
+		let classNameForCookie = target.className;
+
+		objCookies[classNameForCookie] = attributeForCookie;
+		Cookies.set(classNameForCookie, attributeForCookie);
+		applyCookieClass();
+	}
 
 
 

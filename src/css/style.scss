@@ -487,8 +487,8 @@ dt {
   font-family: Arial, sans-serif
 }
 
-.serif .popped {
-  font-family: Georgia, serif
+.serif .page, .serif .nav a, .serif .subnav a, .serif .footer, .serif #out h2, .serif .popped {
+  font-family: $font-family-serif;
 }
 
 .imagesoff .page img {

@@ -6127,8 +6127,8 @@ dt {
 .sans-serif .page, .sans-serif .nav a, .sans-serif .subnav a, .sans-serif .footer, .sans-serif #out h2, .sans-serif .popped {
   font-family: Arial, sans-serif; }
 
-.serif .popped {
-  font-family: Georgia, serif; }
+.serif .page, .serif .nav a, .serif .subnav a, .serif .footer, .serif #out h2, .serif .popped {
+  font-family: "Times New Roman", Georgia, Times, serif; }
 
 .imagesoff .page img {
   display: none; }
