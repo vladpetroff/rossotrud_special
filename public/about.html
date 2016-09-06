@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--meta(name="viewport", content="width=device-width, initial-scale=1.0")-->
-    <title>search.html</title>
+    <title>about.html</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
@@ -18,8 +18,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.5/es5-shim.min.js"></script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
-    <!-- https://www.devbridge.com/sourcery/components/jquery-autocomplete/-->
-    <script src="./js/jquery.autocomplete.min.js" defer></script>
+    <!--script(src="./js/menu.js" defer)-->
     <!-- https://www.devbridge.com/sourcery/components/jquery-autocomplete/-->
     <script src="./js/jquery.autocomplete.min.js" defer></script>
     <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
@@ -98,30 +97,46 @@
         <div class="col-xs-12">
           <nav role="navigation" class="navigation">
             <ul class="list-unstyled list-inline">
-              <li><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
+              <li class="active"><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
               <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
               <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
               <li><a href="news.html" title="Новости">Новости</a></li>
               <li><a href="contacts.html" title="Контакты">Контакты</a></li>
             </ul>
           </nav>
+          <div role="navigation" class="subnav"><a href="about_programs.html" title="Государственные программы">Государственные программы</a><a href="about_structure.html" title="Структура">Структура</a><a href="about_manage.html" title="Руководство">Руководство</a></div>
         </div>
       </div>
       <div class="content-block">
         <div class="row">
           <div class="col-xs-12">
-            <h1>Поиск</h1>
-            <div class="searchField">
-              <div class="row">
-                <div class="col-xs-9">
-                  <input type="text" placeholder="Введите запрос" class="form-control input-lg">
-                </div>
-                <div class="col-xs-3">
-                  <button type="submit" class="btn btn-default btn-lg"><i class="fa fa-search"></i><span>Искать</span></button>
-                </div>
-              </div>
-            </div>
+            <ol class="breadcrumb">
+              <li><a href="./" title="Главная страница">Главная страница</a></li>
+            </ol>
           </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>О Россотрудничестве</h1>
+            <p>Россотрудничество — Федеральное агентство по делам Содружества Независимых Государств, соотечественников, проживающих за рубежом, и по международному гуманитарному сотрудничеству — было создано в сентябре 2008 года в соответствии с Указом Президента Российской Федерации от 6 сентября 2008 года № 1315.</p>
+            <p>Россотрудничество реализует проекты, нацеленные на укрепление международных связей, тесное сотрудничество в гуманитарной сфере и формирование позитивного имиджа России за рубежом.</p>
+            <p>Проводимые мероприятия способствуют преодолению культурных барьеров, негативных стереотипов и иных препятствий на пути развития международного сотрудничества.</p>
+            <p>Россотрудничество представлено в 79 странах мира 92 представительствами.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <nav role="navigation" class="navigation bottom">
+            <ul class="list-unstyled list-inline">
+              <li class="active"><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
+              <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
+              <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
+              <li><a href="news.html" title="Новости">Новости</a></li>
+              <li><a href="contacts.html" title="Контакты">Контакты</a></li>
+            </ul>
+          </nav>
+          <div role="navigation" class="subnav"><a href="about_programs.html" title="Государственные программы">Государственные программы</a><a href="about_structure.html" title="Структура">Структура</a><a href="about_manage.html" title="Руководство">Руководство</a></div>
         </div>
       </div>
       <footer>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--meta(name="viewport", content="width=device-width, initial-scale=1.0")-->
-    <title>search.html</title>
+    <title>contacts_center.html</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
@@ -18,8 +18,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.5/es5-shim.min.js"></script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
-    <!-- https://www.devbridge.com/sourcery/components/jquery-autocomplete/-->
-    <script src="./js/jquery.autocomplete.min.js" defer></script>
+    <!--script(src="./js/menu.js" defer)-->
     <!-- https://www.devbridge.com/sourcery/components/jquery-autocomplete/-->
     <script src="./js/jquery.autocomplete.min.js" defer></script>
     <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
@@ -102,26 +101,111 @@
               <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
               <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
               <li><a href="news.html" title="Новости">Новости</a></li>
-              <li><a href="contacts.html" title="Контакты">Контакты</a></li>
+              <li class="active"><a href="contacts.html" title="Контакты">Контакты</a></li>
             </ul>
           </nav>
+          <div role="navigation" class="subnav"><a href="contacts_center.html" title="Центральный аппарат" class="active">Центральный аппарат</a><a href="contacts_inworld.html" title="Представительства в мире">Представительства в мире</a><a href="contacts_callback" title="Написать обращение">Написать обращение</a></div>
         </div>
       </div>
       <div class="content-block">
         <div class="row">
           <div class="col-xs-12">
-            <h1>Поиск</h1>
-            <div class="searchField">
+            <ol class="breadcrumb">
+              <li><a href="./" title="Главная страница">Главная страница</a></li>
+              <li><a href="contacts.html" title="Контакты">Контакты</a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>Центральный аппарат</h1>
+            <section class="contacts">
+              <h3>Почтовый адрес</h3>
+              <address>125009 Россия, Москва, ул. Воздвиженка, 18/9 <br>Электронная почта: rossotr@rs.gov.ru</address>
+              <h3>Офис в Москве на Воздвиженке</h3>
+              <h4>Руководство</h4>
               <div class="row">
-                <div class="col-xs-9">
-                  <input type="text" placeholder="Введите запрос" class="form-control input-lg">
+                <div class="col-xs-6">
+                  <p>Приемная Руководителя Россотрудничества Л. Н. Глебовой</p>
+                  <h5>+7 (495) 690-12-45 <br>+7 (495) 609-92-48 (факс)</h5>
+                  <p>Приемная заместителя Руководителя И. Б. Живихиной</p>
+                  <h5>+7 (499) 321-54-14</h5>
                 </div>
-                <div class="col-xs-3">
-                  <button type="submit" class="btn btn-default btn-lg"><i class="fa fa-search"></i><span>Искать</span></button>
+                <div class="col-xs-6">
+                  <p>Приемная заместителя Руководителя С. М. Круппо</p>
+                  <h5>+7 (499) 321-54-95</h5>
+                  <p>Приемная заместителя Руководителя А. В. Фролова</p>
+                  <h5>+7 (499) 321-54-60</h5>
                 </div>
               </div>
-            </div>
+              <h4>Управления</h4>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p>Управление российских центров науки и культуры (РЦНК) и страновых программ</p>
+                  <h5>+7 (499) 321-54-64</h5>
+                  <p>Управление стратегического планирования и кадрового развития</p>
+                  <h5>+7 (499) 321-54-15</h5>
+                  <p>Управление обеспечения деятельности</p>
+                  <h5>+7 (499) 321-54-81</h5>
+                  <p>Управление содействия международному развитию (СМР) и взаимодействию с международными организациями</p>
+                  <h5>+7 (499) 321-54-30</h5>
+                  <p>Управление социальной политики и кадров</p>
+                  <h5>+7 (499) 321-54-51</h5>
+                </div>
+                <div class="col-xs-6">
+                  <p>Финансово-экономическое управление</p>
+                  <h5>+7 (499) 321-54-66</h5>
+                  <p>Пресс-служба</p>
+                  <h5>+7 (495) 697-60-20</h5>
+                  <p>Отдел документационного обеспечения и архива (для справок по документам)</p>
+                  <h5>+7 (495) 690-13-92 <br>+7 (495) 609-92-42 (факс)</h5>
+                  <p>Отдел кадров, для справок по кадровым вопросам</p>
+                  <h5>+7 (499) 321-54-51<br><a href="mailto:otdelkadrov@rs.gov.ru" title="otdelkadrov@rs.gov.ru">otdelkadrov@rs.gov.ru</a></h5>
+                  <p>Справки по обращениям граждан</p>
+                  <h5>+7 (499) 321-54-70</h5>
+                </div>
+              </div>
+              <h3>Офис в Москве на Мещанской улице</h3>
+              <h4>Руководство</h4>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p>Приемная заместителя Руководителя Д. Ю. Гужели</p>
+                  <h5>+7 (499) 321-52-74</h5>
+                </div>
+                <div class="col-xs-6">
+                  <p>Приемная заместителя Руководителя А. В. Радькова</p>
+                  <h5>+7 (499) 321-54-78 <br>+7 (495) 204-86-57 (факс)</h5>
+                </div>
+              </div>
+              <h4>Управления</h4>
+              <div class="row">
+                <div class="col-xs-6">
+                  <p>Управление гуманитарного сотрудничества и молодежной политики</p>
+                  <h5>+7 (499) 321-54-08</h5>
+                  <p>Управление сотрудничества в сфере образования и науки</p>
+                  <h5>+7 (495) 204-86-61</h5>
+                </div>
+                <div class="col-xs-6">
+                  <p>Управление по делам соотечественников и развитию общественной дипломати</p>
+                  <h5>+7 (499) 321-52-80</h5>
+                </div>
+              </div>
+            </section>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <nav role="navigation" class="navigation bottom">
+            <ul class="list-unstyled list-inline">
+              <li><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
+              <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
+              <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
+              <li><a href="news.html" title="Новости">Новости</a></li>
+              <li class="active"><a href="contacts.html" title="Контакты">Контакты</a></li>
+            </ul>
+          </nav>
+          <div role="navigation" class="subnav"><a href="contacts_center.html" title="Центральный аппарат" class="active">Центральный аппарат</a><a href="contacts_inworld.html" title="Представительства в мире">Представительства в мире</a><a href="contacts_callback" title="Написать обращение">Написать обращение</a></div>
         </div>
       </div>
       <footer>

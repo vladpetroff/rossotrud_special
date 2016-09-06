@@ -1,0 +1,170 @@
+extends includes/template
+
+block title
+	title contacts_inworld.html
+
+block prepend scripts
+	//script(src="./js/menu.js" defer)
+
+block content
+	.row
+		.col-xs-12
+			nav(role="navigation").navigation
+				ul.list-unstyled.list-inline
+					li: a(href="about.html" title="О Россотрудничестве") О Россотрудничестве
+					li: a(href="activity.html" title="Деятельность") Деятельность
+					li: a(href="anons.html" title="Анонсы") Анонсы
+					li: a(href="news.html" title="Новости") Новости
+					li.active: a(href="contacts.html" title="Контакты") Контакты
+			.subnav(role="navigation")
+				a(href="contacts_center.html", title="Центральный аппарат") Центральный аппарат
+				a(href="contacts_inworld.html", title="Представительства в мире").active Представительства в мире
+				a(href="contacts_callback", title="Написать обращение") Написать обращение
+
+	.content-block
+		.row
+			.col-xs-12
+				ol.breadcrumb
+					li: a(href="./", title="Главная страница") Главная страница
+					li: a(href="contacts.html", title="Контакты") Контакты
+		.row
+			.col-xs-12
+				h1 Представительства в мире
+
+				section.contacts
+					h3 Страны СНГ, Абхазия и Южная Осетия
+					.row
+						.col-xs-6
+							h4 Абхазия
+							a(href="http://abh.rs.gov.ru/", target="_blank") Российский центр науки и культуры в Сухуме
+
+							h4 Азербайджан
+							a(href="http://aze.rs.gov.ru/", target="_blank") Российский информационно-культурный центр в Баку
+
+							h4 Армения
+							a(href="http://arm.rs.gov.ru/", target="_blank") Российский центр науки и культуры в Ереване
+
+							h4 Белоруссия
+							a(href="http://blr-brest.rs.gov.ru/", target="_blank") Отделение Российского центра науки и культуры в Бресте
+							a(href="http://blr.rs.gov.ru/", target="_blank") Российский центр науки и культуры в Минске
+
+							h4 Казахстан
+							a(href="http://kaz.rs.gov.ru/", target="_blank") Российский центр науки и культуры в Астане
+
+						.col-xs-6
+							h4 Киргизия
+							a(href="http://kgz.rs.gov.ru/", target="_blank") Российский центр науки и культуры в Бишкеке
+
+							h4 Молдавия
+							a(href="http://mda.rs.gov.ru/", target="_blank") Российский центр науки и культуры в Кишиневе
+
+							h4 Таджикистан
+							a(href="http://tjk.rs.gov.ru/", target="_blank") Российский центр науки и культуры в Душанбе
+
+							h4 Узбекистан
+							a(href="http://uzb.rs.gov.ru/", target="_blank") Российский центр науки и культуры в Ташкенте
+
+							h4 Украина
+							a(href="http://ukr-odessa.rs.gov.ru/", target="_blank") Представительство в Одессе
+							a(href="http://ukr.rs.gov.ru/", target="_blank") Российский центр науки и культуры в Киеве
+
+							h4 Южная Осетия
+							a(href="http://rso.rs.gov.ru/", target="_blank") Цхинвале
+
+					h3 Европа
+					.row
+						.col-xs-6
+							h4 Австрия
+							a(href="http://www.russischeskulturinstitut.at/", target="_blank") Российский центр науки и культуры в Вене
+
+							h4 Албания
+							a(href="http://prev.rs.gov.ru/pages/albaniya", target="_blank") Представительство в Тиране
+
+							h4 Бельгия
+							a(href="http://bel.rs.gov.ru/", target="_blank") Российский центр науки и культуры в Брюсселе
+
+							h4 Болгария
+							a(href="http://rkic-bg.com/ru/", target="_blank") Российский культурно-информационный центр в Софии
+
+							h4 Великобритания
+							a(href="chttp://gbr.rs.gov.ru/", target="_blank") Представительство в Лондоне
+
+							h4 Венгрия
+							a(href="http://hun.rs.gov.ru/", target="_blank") Российский центр науки и культуры в Будапеште
+
+							h4 Германия
+							a(href="http://russisches-haus.de/de/", target="_blank") Российский центр науки и культуры в Берлине
+
+							h4 Греция
+							a(href="http://www.rcnk.gr/", target="_blank") Российский центр науки и культуры в Афинах
+
+							h4 Дания
+							a(href="http://ruscenter.dk/", target="_blank") Российский центр науки и культуры в Копенгагене
+
+							h4 Испания
+							a(href="http://centroruso.info/", target="_blank") Российский центр науки и культуры в Мадриде
+
+							h4 Италия
+							a(href="contacts_inworld_rome.html") Российский центр науки и культуры в Риме
+
+							h4 Кипр
+							a(href="http://kyp.rs.gov.ru/", target="_blank") Российский центр науки и культуры в Никосии
+
+							h4 Люксембург
+							a(href="http://lux.rs.gov.ru/", target="_blank") Российский центр науки и культуры в Люксембурге
+
+						.col-xs-6
+							h4 Мальта
+							a(href="http://mlt.rs.gov.ru/", target="_blank") Российский центр науки и культуры в Валлетте
+
+							h4 Польша
+							a(href="http://www.ronik.org.pl/index.php/ru/", target="_blank") Российский центр науки и культуры в Варшаве
+							a(href="http://www.russcentrum.pl/", target="_blank") Отделение Российского центра науки и культуры в Гданьске
+
+							h4 Португалия
+							a(href="http://prt.rs.gov.ru/", target="_blank") Представительство в Лиссабоне
+
+							h4 Румыния
+							a(href="http://rou.rs.gov.ru/", target="_blank") Российский центр науки и культуры в Бухаресте
+
+							h4 Сербия
+							a(href="http://ruskidom.rs/", target="_blank") Российский центр науки и культуры в Белграде
+
+							h4 Словакия
+							a(href="http://www.rcvkba.sk/", target="_blank") Российский центр науки и культуры в Братиславе
+
+							h4 Словения
+							a(href="http://tecajruscine.si/", target="_blank") Российский центр науки и культуры в Любляне
+
+							h4 Финляндия
+							a(href="http://fin.rs.gov.ru/", target="_blank") Российский центр науки и культуры в Хельсинки
+
+							h4 Франция
+							a(href="http://www.russiefrance.org/", target="_blank") Российский центр науки и культуры в Париже
+
+							h4 Хорватия
+							a(href="http://prev.rs.gov.ru/pages/horvatiya", target="_blank") Представительство в Загребе
+
+							h4 Черногория
+							a(href="http://prev.rs.gov.ru/pages/chernogoriya", target="_blank") Представительство в Подгорице
+
+							h4 Чехия
+							a(href="http://rsvk.cz/", target="_blank") Российский центр науки и культуры в Праге
+
+							h4 Швейцария
+							a(href="http://che.rs.gov.ru/", target="_blank") Представительство в Берне
+
+
+	.row
+		.col-xs-12
+			nav(role="navigation").navigation.bottom
+				ul.list-unstyled.list-inline
+					li: a(href="about.html" title="О Россотрудничестве") О Россотрудничестве
+					li: a(href="activity.html" title="Деятельность") Деятельность
+					li: a(href="anons.html" title="Анонсы") Анонсы
+					li: a(href="news.html" title="Новости") Новости
+					li.active: a(href="contacts.html" title="Контакты") Контакты
+			.subnav(role="navigation")
+				a(href="contacts_center.html", title="Центральный аппарат") Центральный аппарат
+				a(href="contacts_inworld.html", title="Представительства в мире").active Представительства в мире
+				a(href="contacts_callback", title="Написать обращение") Написать обращение

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--meta(name="viewport", content="width=device-width, initial-scale=1.0")-->
-    <title>search.html</title>
+    <title>anons.html</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
@@ -18,8 +18,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.5/es5-shim.min.js"></script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
-    <!-- https://www.devbridge.com/sourcery/components/jquery-autocomplete/-->
-    <script src="./js/jquery.autocomplete.min.js" defer></script>
+    <!--script(src="./js/menu.js" defer)-->
     <!-- https://www.devbridge.com/sourcery/components/jquery-autocomplete/-->
     <script src="./js/jquery.autocomplete.min.js" defer></script>
     <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
@@ -100,7 +99,7 @@
             <ul class="list-unstyled list-inline">
               <li><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
               <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
-              <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
+              <li class="active"><a href="anons.html" title="Анонсы">Анонсы</a></li>
               <li><a href="news.html" title="Новости">Новости</a></li>
               <li><a href="contacts.html" title="Контакты">Контакты</a></li>
             </ul>
@@ -110,18 +109,59 @@
       <div class="content-block">
         <div class="row">
           <div class="col-xs-12">
-            <h1>Поиск</h1>
-            <div class="searchField">
-              <div class="row">
-                <div class="col-xs-9">
-                  <input type="text" placeholder="Введите запрос" class="form-control input-lg">
-                </div>
-                <div class="col-xs-3">
-                  <button type="submit" class="btn btn-default btn-lg"><i class="fa fa-search"></i><span>Искать</span></button>
-                </div>
-              </div>
-            </div>
+            <ol class="breadcrumb">
+              <li><a href="./" title="Главная страница">Главная страница</a></li>
+            </ol>
           </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>Анонсы</h1>
+            <section class="anons row">
+              <article class="col-xs-12"><a href="anonsDetail.html" title="Писатель горечи и гнева">
+                  <time>28 января 18:00</time>
+                  <h3>Таджикистан, РЦНК в Душанбе</h3>
+                  <h2>Писатель горечи и гнева</h2>
+                  <h4>К 190-летию М. Е. Салтыкова-Щедрина</h4></a></article>
+              <article class="col-xs-12"><a href="anonsDetail.html" title="Азбука хорошего поведения">
+                  <time>28 января, 18:00</time>
+                  <h3>Дания, РЦНК в Копенгагене <br>На русском языке</h3>
+                  <h2>«Азбука хорошего поведения». Спектакль Ульяновского театра им. И. А. Гончарова</h2></a></article>
+              <article class="col-xs-12"><a href="anonsDetail.html" title="Другой человек">
+                  <time>30 января, 19:00</time>
+                  <h3>Дания, РЦНК в Копенгагене <br>На русском языке</h3>
+                  <h2>«Другой человек». Спектакль Ульяновского театра им. И. А. Гончарова</h2></a></article>
+              <article class="col-xs-12"><a href="anonsDetail.html" title="Концерт классической музыки в исполнении учащихся РССШИИ имени М. Атоева">
+                  <time>30 января, 19:00</time>
+                  <h3>Таджикистан, РЦНК в Душанбе <br>На русском языке</h3>
+                  <h2>Концерт классической музыки в исполнении учащихся РССШИИ имени М. Атоева</h2>
+                  <h4>К 5-летию подписания Соглашения об учреждении культурно-информационных центров России и Таджикистана</h4></a></article>
+              <article class="col-xs-12"><a href="anonsDetail.html" title="Выставка картин Николая Дулько, художника из Твери">
+                  <time>31 января — 12 февраля</time>
+                  <h3>Дания, РЦНК в Копенгагене <br>На русском языке</h3>
+                  <h2>Выставка картин Николая Дулько, художника из Твери</h2>
+                  <h4>К 190-летию М. Е. Салтыкова-Щедрина</h4></a></article>
+              <article class="col-xs-12"><a href="anonsDetail.html" title="Выставка «Россия — мировая научная держава»">
+                  <time>5–9 февраля</time>
+                  <h3>Южная Осетия, РЦНК в Цхинвале</h3>
+                  <h2>Выставка «Россия — мировая научная держава»</h2>
+                  <h4>Ко Дню Российской науки</h4></a></article>
+              <p class="readmore text-center col-xs-12"><a href="javascript:;" title="Другие анонсы">Другие анонсы</a></p>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <nav role="navigation" class="navigation bottom">
+            <ul class="list-unstyled list-inline">
+              <li><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
+              <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
+              <li class="active"><a href="anons.html" title="Анонсы">Анонсы</a></li>
+              <li><a href="news.html" title="Новости">Новости</a></li>
+              <li><a href="contacts.html" title="Контакты">Контакты</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
       <footer>

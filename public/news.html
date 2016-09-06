@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--meta(name="viewport", content="width=device-width, initial-scale=1.0")-->
-    <title>search.html</title>
+    <title>news.html</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
@@ -18,8 +18,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.5/es5-shim.min.js"></script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
-    <!-- https://www.devbridge.com/sourcery/components/jquery-autocomplete/-->
-    <script src="./js/jquery.autocomplete.min.js" defer></script>
+    <!--script(src="./js/menu.js" defer)-->
     <!-- https://www.devbridge.com/sourcery/components/jquery-autocomplete/-->
     <script src="./js/jquery.autocomplete.min.js" defer></script>
     <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
@@ -101,7 +100,7 @@
               <li><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
               <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
               <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
-              <li><a href="news.html" title="Новости">Новости</a></li>
+              <li class="active"><a href="news.html" title="Новости">Новости</a></li>
               <li><a href="contacts.html" title="Контакты">Контакты</a></li>
             </ul>
           </nav>
@@ -110,18 +109,61 @@
       <div class="content-block">
         <div class="row">
           <div class="col-xs-12">
-            <h1>Поиск</h1>
-            <div class="searchField">
-              <div class="row">
-                <div class="col-xs-9">
-                  <input type="text" placeholder="Введите запрос" class="form-control input-lg">
-                </div>
-                <div class="col-xs-3">
-                  <button type="submit" class="btn btn-default btn-lg"><i class="fa fa-search"></i><span>Искать</span></button>
-                </div>
-              </div>
-            </div>
+            <ol class="breadcrumb">
+              <li><a href="./" title="Главная страница">Главная страница</a></li>
+            </ol>
           </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>Новости</h1>
+            <section class="news row">
+              <time class="col-xs-12">Сегодня, 27 февраля</time>
+              <article class="col-xs-12"><a href="newsDetail.html" title="Россия принимает участие в Международной книжной ярмарке в Каире">
+                  <h3>Продвижение российской культуры</h3>
+                  <h2>Россия принимает участие в Международной книжной ярмарке в Каире</h2></a></article>
+              <article class="col-xs-12"><a href="newsDetail.html" title="В РЦНК в Нью-Дели прошел круглый стол «БРИКС: эволюция от акронима к глобальному игроку»">
+                  <h3>Развитие деловых связей</h3>
+                  <h2>В РЦНК в Нью-Дели прошел круглый стол «БРИКС: эволюция от акронима к глобальному игроку»</h2></a></article>
+              <article class="col-xs-12"><a href="newsDetail.html" title="Во Франции проходит творческий конкурс для учителей русского языка">
+                  <h3>Образование</h3>
+                  <h2>Во Франции проходит творческий конкурс для учителей русского языка</h2></a></article>
+              <time class="col-xs-12">Вчера, 26 февраля</time>
+              <article class="col-xs-12"><a href="newsDetail.html" title="Россотрудничество примет участие на открывающейся в Лондоне крупнейшей книжной выставке The London Book Fair">
+                  <h3>Культура</h3>
+                  <h2>Россотрудничество примет участие на открывающейся в Лондоне крупнейшей книжной выставке The London Book Fair</h2></a></article>
+              <article class="col-xs-12"><a href="newsDetail.html" title="В Нью-Йорке пройдут художественные выставки, посвященные Юрию Гагарину">
+                  <h3>Общество</h3>
+                  <h2>В Нью-Йорке пройдут художественные выставки, посвященные Юрию Гагарину</h2></a></article>
+              <article class="col-xs-12"><a href="newsDetail.html" title="В Вашингтоне обсудили перспективы сотрудничества в сфере высшего образования">
+                  <h3>Образование</h3>
+                  <h2>В Вашингтоне обсудили перспективы сотрудничества в сфере высшего образования</h2></a></article>
+              <time class="col-xs-12">25 февраля</time>
+              <article class="col-xs-12"><a href="newsDetail.html" title="РЦНК в Каире развивает деловые связи с египетскими вузами">
+                  <h3>Образование</h3>
+                  <h2>РЦНК в Каире развивает деловые связи с египетскими вузами</h2></a></article>
+              <article class="col-xs-12"><a href="newsDetail.html" title="Заместитель директора РИСИ Тамара Гузенкова стала почетным членом Евразийского экспертного клуба в Ереване">
+                  <h3>Общество</h3>
+                  <h2>Заместитель директора РИСИ Тамара Гузенкова стала почетным членом Евразийского экспертного клуба в Ереване</h2></a></article>
+              <article class="col-xs-12"><a href="newsDetail.html" title="В РЦНК в Афинах обсудили вопросы межправославных греко-российских связей">
+                  <h3>Тематические встречи</h3>
+                  <h2>В РЦНК в Афинах обсудили вопросы межправославных греко-российских связей</h2></a></article>
+              <p class="readmore text-center col-xs-12"><a href="javascript:;" title="Другие новости">Другие новости</a></p>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <nav role="navigation" class="navigation bottom">
+            <ul class="list-unstyled list-inline">
+              <li><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
+              <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
+              <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
+              <li class="active"><a href="news.html" title="Новости">Новости</a></li>
+              <li><a href="contacts.html" title="Контакты">Контакты</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
       <footer>

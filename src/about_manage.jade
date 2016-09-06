@@ -1,0 +1,57 @@
+extends includes/template
+
+block title
+	title about_manage.html
+
+block prepend scripts
+	//script(src="./js/menu.js" defer)
+
+block content
+	.row
+		.col-xs-12
+			nav(role="navigation").navigation
+				ul.list-unstyled.list-inline
+					li.active: a(href="about.html" title="О Россотрудничестве") О Россотрудничестве
+					li: a(href="activity.html" title="Деятельность") Деятельность
+					li: a(href="anons.html" title="Анонсы") Анонсы
+					li: a(href="news.html" title="Новости") Новости
+					li: a(href="contacts.html" title="Контакты") Контакты
+			.subnav(role="navigation")
+				a(href="about_programs.html", title="Государственные программы") Государственные программы
+				a(href="about_structure.html", title="Структура") Структура
+				a(href="about_manage.html", title="Руководство").active Руководство
+
+	.content-block
+		.row
+			.col-xs-12
+				ol.breadcrumb
+					li: a(href="./", title="Главная страница") Главная страница
+					li: a(href="about.html", title="О Россотрудничестве") О Россотрудничестве
+		.row
+			.col-xs-12
+				h1 Руководство
+				h2: a(href="about_manage_glebova.html") Любовь Николаевна Глебова
+				p Руководитель Россотрудничества #[br]Доктор педагогических наук, член-корреспондент Российской академии образования, действительный государственный советник РФ 1 класса
+
+				h2 Заместители руководителя
+				ul.list-unstyled
+					li: p: a(href="javascript:;", title="Дмитрий Юрьевич Гужеля") Дмитрий Юрьевич Гужеля
+					li: p: a(href="javascript:;", title="Ирина Борисовна Живихина") Ирина Борисовна Живихина
+					li: p: a(href="javascript:;", title="Сергей Маратович Круппо") Сергей Маратович Круппо
+					li: p: a(href="javascript:;", title="Александр Васильевич Радьков") Александр Васильевич Радьков
+					li: p: a(href="javascript:;", title="Алексей Владимирович Фролов") Алексей Владимирович Фролов
+
+
+	.row
+		.col-xs-12
+			nav(role="navigation").navigation.bottom
+				ul.list-unstyled.list-inline
+					li.active: a(href="about.html" title="О Россотрудничестве") О Россотрудничестве
+					li: a(href="activity.html" title="Деятельность") Деятельность
+					li: a(href="anons.html" title="Анонсы") Анонсы
+					li: a(href="news.html" title="Новости") Новости
+					li: a(href="contacts.html" title="Контакты") Контакты
+			.subnav(role="navigation")
+				a(href="about_programs.html", title="Государственные программы") Государственные программы
+				a(href="about_structure.html", title="Структура") Структура
+				a(href="about_manage.html", title="Руководство").active Руководство

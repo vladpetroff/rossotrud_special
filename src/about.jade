@@ -1,0 +1,50 @@
+extends includes/template
+
+block title
+	title about.html
+
+block prepend scripts
+	//script(src="./js/menu.js" defer)
+
+block content
+	.row
+		.col-xs-12
+			nav(role="navigation").navigation
+				ul.list-unstyled.list-inline
+					li.active: a(href="about.html" title="О Россотрудничестве") О Россотрудничестве
+					li: a(href="activity.html" title="Деятельность") Деятельность
+					li: a(href="anons.html" title="Анонсы") Анонсы
+					li: a(href="news.html" title="Новости") Новости
+					li: a(href="contacts.html" title="Контакты") Контакты
+			.subnav(role="navigation")
+				a(href="about_programs.html", title="Государственные программы") Государственные программы
+				a(href="about_structure.html", title="Структура") Структура
+				a(href="about_manage.html", title="Руководство") Руководство
+
+	.content-block
+		.row
+			.col-xs-12
+				ol.breadcrumb
+					li: a(href="./", title="Главная страница") Главная страница
+		.row
+			.col-xs-12
+				h1 О Россотрудничестве
+				p Россотрудничество — Федеральное агентство по делам Содружества Независимых Государств, соотечественников, проживающих за рубежом, и по международному гуманитарному сотрудничеству — было создано в сентябре 2008 года в соответствии с Указом Президента Российской Федерации от 6 сентября 2008 года № 1315.
+				p Россотрудничество реализует проекты, нацеленные на укрепление международных связей, тесное сотрудничество в гуманитарной сфере и формирование позитивного имиджа России за рубежом.
+				p Проводимые мероприятия способствуют преодолению культурных барьеров, негативных стереотипов и иных препятствий на пути развития международного сотрудничества.
+				p Россотрудничество представлено в 79 странах мира 92 представительствами.
+
+
+	.row
+		.col-xs-12
+			nav(role="navigation").navigation.bottom
+				ul.list-unstyled.list-inline
+					li.active: a(href="about.html" title="О Россотрудничестве") О Россотрудничестве
+					li: a(href="activity.html" title="Деятельность") Деятельность
+					li: a(href="anons.html" title="Анонсы") Анонсы
+					li: a(href="news.html" title="Новости") Новости
+					li: a(href="contacts.html" title="Контакты") Контакты
+			.subnav(role="navigation")
+				a(href="about_programs.html", title="Государственные программы") Государственные программы
+				a(href="about_structure.html", title="Структура") Структура
+				a(href="about_manage.html", title="Руководство") Руководство

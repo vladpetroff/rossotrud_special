@@ -1,0 +1,66 @@
+extends includes/template
+
+block title
+	title contacts_inworld_rome.html
+
+block prepend scripts
+	//script(src="./js/menu.js" defer)
+
+block content
+	.row
+		.col-xs-12
+			nav(role="navigation").navigation
+				ul.list-unstyled.list-inline
+					li: a(href="about.html" title="О Россотрудничестве") О Россотрудничестве
+					li: a(href="activity.html" title="Деятельность") Деятельность
+					li: a(href="anons.html" title="Анонсы") Анонсы
+					li: a(href="news.html" title="Новости") Новости
+					li.active: a(href="contacts.html" title="Контакты") Контакты
+			.subnav(role="navigation")
+				a(href="contacts_center.html", title="Центральный аппарат") Центральный аппарат
+				a(href="contacts_inworld.html", title="Представительства в мире").active Представительства в мире
+				a(href="contacts_callback", title="Написать обращение") Написать обращение
+
+	.content-block
+		.row
+			.col-xs-12
+				ol.breadcrumb
+					li: a(href="./", title="Главная страница") Главная страница
+					li: a(href="contacts.html", title="Контакты") Контакты
+					li: a(href="contacts_inworld.html", title="Представительства в мире") Представительства в мире
+		.row
+			.col-xs-12
+				h1 Российский центр науки и культуры в Риме
+
+				section.contacts
+					address 00186 Италия, Рим, Пьяцца Бенедетто Каироли, 6 #[br]Italia, Piazza Benedetto Cairoli, 6 — 00186 Roma
+
+					.row
+						.col-xs-5
+							h5 Руководитель
+							h5 Телефон
+							h5 Факс
+							h5 Электронная почта
+							h5 Сайт
+
+						.col-xs-7
+							h5 Олег Валентинович Осипов
+							h5 +39-06 888-16-333
+							h5 +39-06 683-00-982
+							h5: a(href="mailto:centroculturale@mail.ru", title="centroculturale@mail.ru") centroculturale@mail.ru
+							h5: a(href="ita.rs.gov.ru", title="ita.rs.gov.ru") ita.rs.gov.ru
+
+
+	.row
+		.col-xs-12
+			nav(role="navigation").navigation.bottom
+				ul.list-unstyled.list-inline
+					li: a(href="about.html" title="О Россотрудничестве") О Россотрудничестве
+					li: a(href="activity.html" title="Деятельность") Деятельность
+					li: a(href="anons.html" title="Анонсы") Анонсы
+					li: a(href="news.html" title="Новости") Новости
+					li.active: a(href="contacts.html" title="Контакты") Контакты
+			.subnav(role="navigation")
+				a(href="contacts_center.html", title="Центральный аппарат") Центральный аппарат
+				a(href="contacts_inworld.html", title="Представительства в мире").active Представительства в мире
+				a(href="contacts_callback", title="Написать обращение") Написать обращение

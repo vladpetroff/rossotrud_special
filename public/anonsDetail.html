@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--meta(name="viewport", content="width=device-width, initial-scale=1.0")-->
-    <title>search.html</title>
+    <title>anonsDetail.html</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
@@ -18,8 +18,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.5/es5-shim.min.js"></script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
-    <!-- https://www.devbridge.com/sourcery/components/jquery-autocomplete/-->
-    <script src="./js/jquery.autocomplete.min.js" defer></script>
+    <!--script(src="./js/menu.js" defer)-->
     <!-- https://www.devbridge.com/sourcery/components/jquery-autocomplete/-->
     <script src="./js/jquery.autocomplete.min.js" defer></script>
     <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
@@ -100,7 +99,7 @@
             <ul class="list-unstyled list-inline">
               <li><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
               <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
-              <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
+              <li class="active"><a href="anons.html" title="Анонсы">Анонсы</a></li>
               <li><a href="news.html" title="Новости">Новости</a></li>
               <li><a href="contacts.html" title="Контакты">Контакты</a></li>
             </ul>
@@ -110,18 +109,36 @@
       <div class="content-block">
         <div class="row">
           <div class="col-xs-12">
-            <h1>Поиск</h1>
-            <div class="searchField">
-              <div class="row">
-                <div class="col-xs-9">
-                  <input type="text" placeholder="Введите запрос" class="form-control input-lg">
-                </div>
-                <div class="col-xs-3">
-                  <button type="submit" class="btn btn-default btn-lg"><i class="fa fa-search"></i><span>Искать</span></button>
-                </div>
-              </div>
-            </div>
+            <ol class="breadcrumb">
+              <li><a href="./" title="Главная страница">Главная страница</a></li>
+              <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
+            </ol>
           </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>«Полет чайки: от Таганрога до Мадрида». Выставка документальных фотографий о жизни и творчестве А. П. Чехова</h1>
+            <h5>Год России в Испании</h5>
+            <h3>3–31 мая</h3>
+            <h3>Испания, Высшая Королевская школа драматического искусства (РЕСАД)</h3>
+            <address>28009 Испания, Мадрид, Авенида де Назарет, 2 <br>Avenida de Nazaret 2. 28009 Madrid, España</address>
+            <p>С 3 по 31 мая в Высшей Королевской школе драматического искусства (РЕСАД) в Мадриде пройдет выставка документальных фотографий «Полет чайки: от Таганрога до Мадрида» о жизни и творчестве русского писателя, прозаика, драматурга Антона Павловича Чехова.</p>
+            <p>Организаторы — Высшая Королевская школа драматического искусства (РЕСАД), представительство Россотрудничества в Испании и Ассоциация студентов и выпускников российских вузов «Аэлерус».</p>
+            <p>В выставке примут участие театральные коллективы, студенты театральных вузов, а также представители культурной общественности.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <nav role="navigation" class="navigation bottom">
+            <ul class="list-unstyled list-inline">
+              <li><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
+              <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
+              <li class="active"><a href="anons.html" title="Анонсы">Анонсы</a></li>
+              <li><a href="news.html" title="Новости">Новости</a></li>
+              <li><a href="contacts.html" title="Контакты">Контакты</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
       <footer>

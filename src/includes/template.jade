@@ -5,7 +5,7 @@ html(lang="en")
 	head
 		meta(charset="UTF-8")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
-		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		//meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
 		block title
 
@@ -48,43 +48,43 @@ body
 							dl.a-fontsize
 								dt Размер шрифта
 								dd
-									a.a-fontsize-small(href='#' title="Уменьшить размер") A
+									a.a-fontsize-small(href='javascript:;' title="Уменьшить размер") A
 								dd
-									a.a-fontsize-big(href='#' title="Увеличить шрифт") A
+									a.a-fontsize-big(href='javascript:;' title="Увеличить шрифт") A
 							dl.a-colors
 								dt Цвет
 								dd
-									a#a-color1.chooseColor(href='#', rel='color1', title="Черный по белому") Ц
+									a#a-color1.chooseColor(href='javascript:;', rel='color1', title="Черный по белому") Ц
 								dd
-									a#a-color2.chooseColor(href='#', rel='color2', title="Белый по черному") Ц
+									a#a-color2.chooseColor(href='javascript:;', rel='color2', title="Белый по черному") Ц
 								dd
-									a#a-color3.chooseColor(href='#', rel='color3', title="Черный по голубому") Ц
-							p.a-settings Настройки #[a(href="#", aria-hidden="true", title="Настройки").fa.fa-cog.fa-lg]
-							p.a-search Поиск #[a(href='/search.html', aria-hidden="true", title="Страница поиска").fa.fa-search]
+									a#a-color3.chooseColor(href='javascript:;', rel='color3', title="Черный по голубому") Ц
+							p.a-settings Настройки #[a(href="javascript:;", aria-hidden="true", title="Настройки").fa.fa-cog.fa-lg]
+							p.a-search Поиск #[a(href='search.html', aria-hidden="true", title="Страница поиска").fa.fa-search]
 
 							.popped.hidden
 								h2 Настройки шрифта:
 								p.choose-font-family
 									span Выберите шрифт
-									a#sans-serif.font-family(rel='sans-serif', href='#', title="Arial") Arial
-									a#serif.font-family(rel='serif', href='#', title="Times") Times New Roman
+									a#sans-serif.font-family(rel='sans-serif', href='javascript:;', title="Arial") Arial
+									a#serif.font-family(rel='serif', href='javascript:;', title="Times") Times New Roman
 								p.choose-letter-spacing
 									span Интервал между буквами
-									a#spacing-small.letter-spacing(rel='spacing-small', href='#', title="Стандартный интервал") Стандартный
-									a#spacing-normal.letter-spacing(rel='spacing-normal', href='#', title="Средний интервал") Средний
-									a#spacing-big.letter-spacing(rel='spacing-big', href='#', title="Большой интервал") Большой
+									a#spacing-small.letter-spacing(rel='spacing-small', href='javascript:;', title="Стандартный интервал") Стандартный
+									a#spacing-normal.letter-spacing(rel='spacing-normal', href='javascript:;', title="Средний интервал") Средний
+									a#spacing-big.letter-spacing(rel='spacing-big', href='javascript:;', title="Большой интервал") Большой
 								h2 Выбор цветовой схемы:
 								ul.choose-colors
 									li#color1
-										a(rel='color1', href='#', title="Черный по белому").chooseColor Черный по белому
+										a(rel='color1', href='javascript:;', title="Черный по белому").chooseColor Черный по белому
 									li#color2
-										a(rel='color2', href='#', title="Белый по черному").chooseColor Белый по черному
+										a(rel='color2', href='javascript:;', title="Белый по черному").chooseColor Белый по черному
 									li#color3
-										a(rel='color3', href='#', title="Черный по голубому").chooseColor Черный по голубому
+										a(rel='color3', href='javascript:;', title="Черный по голубому").chooseColor Черный по голубому
 
 								p.saveit
-									a.default(href='#', title="Вернуть стандартные настройки") Вернуть стандартные настройки
-									a.closepopped(href='#', title="Закрыть панель") Закрыть панель
+									a.default(href='javascript:;', title="Вернуть стандартные настройки") Вернуть стандартные настройки
+									a.closepopped(href='javascript:;', title="Закрыть панель") Закрыть панель
 
 
 

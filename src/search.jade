@@ -3,15 +3,11 @@ extends includes/template
 block title
 	title search.html
 
-block prepend css
-	// Элементы форм  http://silviomoreto.github.io/bootstrap-select/
-	link(href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css", rel="stylesheet")
-
-
 //- Дополнительные скрипты для отдельных страниц
 block prepend scripts
 	// https://www.devbridge.com/sourcery/components/jquery-autocomplete/
 	script(src="./js/jquery.autocomplete.min.js" defer)
+
 
 block content
 	.row
@@ -24,14 +20,17 @@ block content
 					li: a(href="news.html" title="Новости") Новости
 					li: a(href="contacts.html" title="Контакты") Контакты
 
-	.row
-		.col-xs-12
-			h1 Поиск
+	.content-block
+		.row
+			.col-xs-12
+				h1 Поиск
 
-			.searchField
-				.row
-					.col-xs-9
-						input(type="text", placeholder="Введите запрос").form-control.input-lg
-					.col-xs-3
-						button(type="submit").btn.btn-default.btn-lg: i.fa.fa-search.fa-lg Искать
+				.searchField
+					.row
+						.col-xs-9
+							input(type="text", placeholder="Введите запрос").form-control.input-lg
+						.col-xs-3
+							button(type="submit").btn.btn-default.btn-lg
+								i.fa.fa-search
+								span Искать
 

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--meta(name="viewport", content="width=device-width, initial-scale=1.0")-->
+    <title>about_structure.html</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css" rel="stylesheet">
+    <!-- Чекбоксы и радио https://github.com/flatlogic/awesome-bootstrap-checkbox-->
+    <link href="./css/awesome-bootstrap-checkbox.css" rel="stylesheet"/>
+    <link href="./css/style.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- Modern behaviour for old browsers:-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.5/es5-shim.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+    <!--script(src="./js/menu.js" defer)-->
+    <!-- https://www.devbridge.com/sourcery/components/jquery-autocomplete/-->
+    <script src="./js/jquery.autocomplete.min.js" defer></script>
+    <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+    <!-- https://github.com/js-cookie/js-cookie-->
+    <script src="./js/js.cookie.js" defer></script>
+    <script src="./js/main.js" defer></script>
+  </head>
+</html>
+<body>
+  <div id="out" class="container-fluid">
+    <div id="settings" class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2 class="text_only">Настройки отображения</h2>
+            <div class="access">
+              <dl class="a-fontsize">
+                <dt>Размер шрифта</dt>
+                <dd><a href="javascript:;" title="Уменьшить размер" class="a-fontsize-small">A</a></dd>
+                <dd><a href="javascript:;" title="Увеличить шрифт" class="a-fontsize-big">A</a></dd>
+              </dl>
+              <dl class="a-colors">
+                <dt>Цвет</dt>
+                <dd><a id="a-color1" href="javascript:;" rel="color1" title="Черный по белому" class="chooseColor">Ц</a></dd>
+                <dd><a id="a-color2" href="javascript:;" rel="color2" title="Белый по черному" class="chooseColor">Ц</a></dd>
+                <dd><a id="a-color3" href="javascript:;" rel="color3" title="Черный по голубому" class="chooseColor">Ц</a></dd>
+              </dl>
+              <p class="a-settings">Настройки <a href="javascript:;" aria-hidden="true" title="Настройки" class="fa fa-cog fa-lg"></a></p>
+              <p class="a-search">Поиск <a href="search.html" aria-hidden="true" title="Страница поиска" class="fa fa-search"></a></p>
+              <div class="popped hidden">
+                <h2>Настройки шрифта:</h2>
+                <p class="choose-font-family"><span>Выберите шрифт</span><a id="sans-serif" rel="sans-serif" href="javascript:;" title="Arial" class="font-family">Arial</a><a id="serif" rel="serif" href="javascript:;" title="Times" class="font-family">Times New Roman</a></p>
+                <p class="choose-letter-spacing"><span>Интервал между буквами</span><a id="spacing-small" rel="spacing-small" href="javascript:;" title="Стандартный интервал" class="letter-spacing">Стандартный</a><a id="spacing-normal" rel="spacing-normal" href="javascript:;" title="Средний интервал" class="letter-spacing">Средний</a><a id="spacing-big" rel="spacing-big" href="javascript:;" title="Большой интервал" class="letter-spacing">Большой</a></p>
+                <h2>Выбор цветовой схемы:</h2>
+                <ul class="choose-colors">
+                  <li id="color1"><a rel="color1" href="javascript:;" title="Черный по белому" class="chooseColor">Черный по белому</a></li>
+                  <li id="color2"><a rel="color2" href="javascript:;" title="Белый по черному" class="chooseColor">Белый по черному</a></li>
+                  <li id="color3"><a rel="color3" href="javascript:;" title="Черный по голубому" class="chooseColor">Черный по голубому</a></li>
+                </ul>
+                <p class="saveit"><a href="javascript:;" title="Вернуть стандартные настройки" class="default">Вернуть стандартные настройки</a><a href="javascript:;" title="Закрыть панель" class="closepopped">Закрыть панель</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page container">
+      <header>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="header-top"><a href="javascript:;" title="Сайты представительств" class="pull-left header-repres-sites">Сайты представительств</a>
+              <select data-width="fit" class="selectpicker lang pull-left">
+                <option>Русский язык</option>
+                <option>English</option>
+                <option>Deutch</option>
+                <option>Français					option Espaniol</option>
+              </select><a href="https://vladpetroff.github.io/rossotrud/public" title="Обычная версия сайта" class="pull-right"><span><i aria-hidden="true" class="fa fa-eye fa-lg"></i> Обычная версия сайта</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12"><a href="./" title="На главную страницу">
+              <div class="header-logo pull-left"><img src="./img/icons/rs-logo-mini.png" alt="Россотрудничество"></div></a>
+            <div class="header-text pull-left">
+              <h1>РОССОТРУДНИЧЕСТВО</h1>
+              <p>Федеральное агентство по делам Содружества Независимых <br>
+                государств, соотечественников, проживающих за рубежом,<br>
+                и по международному гуманитарному сотрудничеству
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="row">
+        <div class="col-xs-12">
+          <nav role="navigation" class="navigation">
+            <ul class="list-unstyled list-inline">
+              <li class="active"><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
+              <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
+              <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
+              <li><a href="news.html" title="Новости">Новости</a></li>
+              <li><a href="contacts.html" title="Контакты">Контакты</a></li>
+            </ul>
+          </nav>
+          <div role="navigation" class="subnav"><a href="about_programs.html" title="Государственные программы">Государственные программы</a><a href="about_structure.html" title="Структура" class="active">Структура</a><a href="about_manage.html" title="Руководство">Руководство</a></div>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="row">
+          <div class="col-xs-12">
+            <ol class="breadcrumb">
+              <li><a href="./" title="Главная страница">Главная страница</a></li>
+              <li><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>Структура</h1>
+            <h2>Управление гуманитарного сотрудничества и молодежной политики</h2>
+            <p>Основная деятельность УГСиМП — содействие развитию культурных, молодежных и иных гуманитарных связей с иностранными государствами, содействие продвижению и популяризации российского историко-культурного наследия и отечественной культуры за рубежом, реализация программы краткосрочных ознакомительных поездок в Российскую Федерацию молодых представителей политических, общественных, научных и деловых кругов иностранных государств «Новое поколение», а также работа с инициативным проектами российских и зарубежных организаций.</p>
+            <h2>Управление обеспечения деятельности</h2>
+            <p>Основными направлениями деятельности Управления являются материально-техническое, документационное, правовое обеспечение, организационный контроль, развитие информационных ресурсов, организация государственных закупок и управление имуществом.</p>
+            <h2>Управление по делам Содружества Независимых Государств</h2>
+            <p>Основными направлениями деятельности Управления являются: общая координация деятельности представительств Россотрудничества (РЦНК) в государствах-участниках СНГ, Республике Абхазия и Республике Южная Осетия; формирование программно-проектных приоритетов в деятельности Россотрудничества в государствах-участниках СНГ, Республике Абхазия и Республике Южная Осетия на текущий период и перспективу; взаимодействие и реализация совместных соглашений, проектов и программ с международными, региональными, национальными, правительственными и неправительственными организациями в целях создания благоприятных условий для расширения всестороннего сотрудничества Российской Федерации с государствами-участниками СНГ, республиками Абхазия и Южная Осетия; реализация полномочий Россотрудничества как заказчика-координатора Межгосударственной программы инновационного сотрудничества государств-участников СНГ на период до 2020 года.</p>
+            <h2>Управление по делам соотечественников и развитию общественной дипломатии</h2>
+            <p>Обеспечивает организацию и координацию работы по реализации основных мероприятий Программы работы с соотечественниками, проживающими за рубежом, в части компетенции Россотрудничества. Участвовало в разработке и подготовке проекта Программы на 2015 – 2017 годы. Организует мероприятия по поддержанию и сохранению находящихся за рубежом мест погребения, имеющих для Российской Федерации историко-мемориальное значение. Развивает взаимодействие с российскими и зарубежными неправительственными организациями; координирует деятельность обществ дружбы; содействует поддержанию и развитию международных контактов субъектов Российской Федерации; координирует сотрудничество между породненными городами.</p>
+            <h2>Управление РЦНК и страновых программ</h2>
+            <p>Осуществляет оперативное управление деятельностью представительств (РЦНК), совершенствовует формы и методы их деятельности; участвует в подготовке предложений по развитию и оптимизации сети представительств за рубежом, модернизации их деятельности и внедрению лучших практик; контролирует выполнение представительствами планов и анализирует отчёты об их деятельности; содействует реализации на базе РЦНК программ, направленных на развитие региональной и субрегиональной интеграции.</p>
+            <h2>Управление содействия международному развитию (СМР) и взаимодействию с международными организациями</h2>
+            <p>Занимается разработкой, согласованием и реализацией среднесрочных и долгосрочных программ в сфере содействия международному развитию (СМР) на двустороннем уровне, а также разработкой механизмов, критериев оценки и мониторингом их реализации; взаимодействием с федеральными органами государственной власти Российской Федерации по вопросам выработки и реализации государственной политики в сфере СМР; осуществляет учет программ официальной помощи развитию в части компетенции Россотрудничества; организует мероприятий по повышению кадрового потенциала в российском СМР; осуществляет информационное сопровождение тематики СМР в России и за рубежом, в том числе с использованием потенциала РЦНК.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <nav role="navigation" class="navigation bottom">
+            <ul class="list-unstyled list-inline">
+              <li class="active"><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
+              <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
+              <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
+              <li><a href="news.html" title="Новости">Новости</a></li>
+              <li><a href="contacts.html" title="Контакты">Контакты</a></li>
+            </ul>
+          </nav>
+          <div role="navigation" class="subnav"><a href="about_programs.html" title="Государственные программы">Государственные программы</a><a href="about_structure.html" title="Структура" class="active">Структура</a><a href="about_manage.html" title="Руководство">Руководство</a></div>
+        </div>
+      </div>
+      <footer>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="footer-social">
+              <p>Присоединяйтесь к нам в социальных сетях:</p>
+              <ul class="list-unstyled">
+                <li><a href="javascript:;" title="Фейсбук">Фейсбук</a></li>
+                <li><a href="javascript:;" title="Вконтакте">Вконтакте</a></li>
+                <li><a href="javascript:;" title="Инстраграм">Инстраграм</a></li>
+                <li><a href="javascript:;" title="YouTube">YouTube</a></li>
+                <li><a href="javascript:;" title="Твиттер">Твиттер</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="footer-copy">
+              <p>Федеральное агентство по делам Содружества Независимых государств, соотечественников, проживающих за рубежом, и по международному гуманитарному сотрудничеству</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>

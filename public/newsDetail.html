@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--meta(name="viewport", content="width=device-width, initial-scale=1.0")-->
-    <title>search.html</title>
+    <title>newsDetail.html</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
@@ -18,8 +18,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.5/es5-shim.min.js"></script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
-    <!-- https://www.devbridge.com/sourcery/components/jquery-autocomplete/-->
-    <script src="./js/jquery.autocomplete.min.js" defer></script>
+    <!--script(src="./js/menu.js" defer)-->
     <!-- https://www.devbridge.com/sourcery/components/jquery-autocomplete/-->
     <script src="./js/jquery.autocomplete.min.js" defer></script>
     <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
@@ -101,7 +100,7 @@
               <li><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
               <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
               <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
-              <li><a href="news.html" title="Новости">Новости</a></li>
+              <li class="active"><a href="news.html" title="Новости">Новости</a></li>
               <li><a href="contacts.html" title="Контакты">Контакты</a></li>
             </ul>
           </nav>
@@ -110,18 +109,41 @@
       <div class="content-block">
         <div class="row">
           <div class="col-xs-12">
-            <h1>Поиск</h1>
-            <div class="searchField">
-              <div class="row">
-                <div class="col-xs-9">
-                  <input type="text" placeholder="Введите запрос" class="form-control input-lg">
-                </div>
-                <div class="col-xs-3">
-                  <button type="submit" class="btn btn-default btn-lg"><i class="fa fa-search"></i><span>Искать</span></button>
-                </div>
-              </div>
-            </div>
+            <ol class="breadcrumb">
+              <li><a href="./" title="Главная страница">Главная страница</a></li>
+              <li><a href="news.html" title="Новости">Новости</a></li>
+            </ol>
           </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <header>Общества дружбы</header>
+            <h1>В Россотрудничестве прошло заседание Центрального правления «Союза друзей Болгарии»</h1>
+            <time>11 февраля</time>
+            <h3>В Россотрудничестве состоялось заседание Центрального Правления «Союза друзей Болгарии» (СДБ). В ходе встречи были подведены итоги деятельности Союза за прошедший год и рассмотрен план работы на 2016 год.</h3>
+            <p>В своем выступлении председатель Правления СДБ, Чрезвычайный и полномочный посол Российской Федерации А. В. Потапов, отметил, что за прошедший год Союзом было успешно реализовано немало интересных проектов, посвященных памятным датам истории и культуры России и Болгарии.</p>
+            <p>В ходе заседания был рассмотрен план совместных мероприятий на 2016 год, направленных на дальнейшее укрепление российско-болгарских культурно-гуманитарных связей, в том числе: проведение совместно с Администрацией города Мышкин V-ой российско-болгарской детской вокально-хоровой ассамблеи «Мышкинская Сказка», а также торжеств, посвященных Освобождению Болгарии от османского ига (3 марта — государственный праздник Болгарии) и Дню славянской письменности и культуры (24 мая).</p>
+            <h3>Документы</h3>
+            <p><a href="javascript:;" title="Протокол заседания Центрального правления «Союза друзей Болгарии»">Протокол заседания Центрального правления «Союза друзей Болгарии» <br></a><small>PDF, 1,56 Мб</small></p>
+            <p><a href="javascript:;" title="Фотографии со встречи">Фотографии со встречи <br></a><small>ZIP, 5,73 Мб</small></p>
+            <hr>
+            <p>Учрежденный в ноябре 1991 года «Союз друзей Болгарии» является продолжателем дела и традиций общества советско-болгарской дружбы.  Основная задача Союза — укрепление и развитие вековых традиций дружбы между народами России и Болгарии, содействие в установлении и поддержании диалога, а также сотрудничества с болгарской общественностью, ознакомление широких слоев населения с историей, жизнью и традициями двух стран, с достижениями в области экономики, науки, техники, культуры, образования, спорта; развитие связей с соотечественниками, участие в распространении русского языка.</p>
+            <p>СДБ поддерживает постоянные рабочие контакты с Россотрудничеством, РАМС, Российским и Болгарским культурно-информационными центрами, другими официальными представительствами Болгарии в Москве, российским посольством и генеральными консульствами в Болгарии.</p>
+            <hr>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <nav role="navigation" class="navigation bottom">
+            <ul class="list-unstyled list-inline">
+              <li><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
+              <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
+              <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
+              <li class="active"><a href="news.html" title="Новости">Новости</a></li>
+              <li><a href="contacts.html" title="Контакты">Контакты</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
       <footer>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--meta(name="viewport", content="width=device-width, initial-scale=1.0")-->
+    <title>index.html</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css" rel="stylesheet">
+    <!-- Чекбоксы и радио https://github.com/flatlogic/awesome-bootstrap-checkbox-->
+    <link href="./css/awesome-bootstrap-checkbox.css" rel="stylesheet"/>
+    <link href="./css/style.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- Modern behaviour for old browsers:-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.5/es5-shim.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+    <!--script(src="./js/menu.js" defer)-->
+    <!-- https://www.devbridge.com/sourcery/components/jquery-autocomplete/-->
+    <script src="./js/jquery.autocomplete.min.js" defer></script>
+    <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+    <!-- https://github.com/js-cookie/js-cookie-->
+    <script src="./js/js.cookie.js" defer></script>
+    <script src="./js/main.js" defer></script>
+  </head>
+</html>
+<body>
+  <div id="out" class="container-fluid">
+    <div id="settings" class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2 class="text_only">Настройки отображения</h2>
+            <div class="access">
+              <dl class="a-fontsize">
+                <dt>Размер шрифта</dt>
+                <dd><a href="javascript:;" title="Уменьшить размер" class="a-fontsize-small">A</a></dd>
+                <dd><a href="javascript:;" title="Увеличить шрифт" class="a-fontsize-big">A</a></dd>
+              </dl>
+              <dl class="a-colors">
+                <dt>Цвет</dt>
+                <dd><a id="a-color1" href="javascript:;" rel="color1" title="Черный по белому" class="chooseColor">Ц</a></dd>
+                <dd><a id="a-color2" href="javascript:;" rel="color2" title="Белый по черному" class="chooseColor">Ц</a></dd>
+                <dd><a id="a-color3" href="javascript:;" rel="color3" title="Черный по голубому" class="chooseColor">Ц</a></dd>
+              </dl>
+              <p class="a-settings">Настройки <a href="javascript:;" aria-hidden="true" title="Настройки" class="fa fa-cog fa-lg"></a></p>
+              <p class="a-search">Поиск <a href="search.html" aria-hidden="true" title="Страница поиска" class="fa fa-search"></a></p>
+              <div class="popped hidden">
+                <h2>Настройки шрифта:</h2>
+                <p class="choose-font-family"><span>Выберите шрифт</span><a id="sans-serif" rel="sans-serif" href="javascript:;" title="Arial" class="font-family">Arial</a><a id="serif" rel="serif" href="javascript:;" title="Times" class="font-family">Times New Roman</a></p>
+                <p class="choose-letter-spacing"><span>Интервал между буквами</span><a id="spacing-small" rel="spacing-small" href="javascript:;" title="Стандартный интервал" class="letter-spacing">Стандартный</a><a id="spacing-normal" rel="spacing-normal" href="javascript:;" title="Средний интервал" class="letter-spacing">Средний</a><a id="spacing-big" rel="spacing-big" href="javascript:;" title="Большой интервал" class="letter-spacing">Большой</a></p>
+                <h2>Выбор цветовой схемы:</h2>
+                <ul class="choose-colors">
+                  <li id="color1"><a rel="color1" href="javascript:;" title="Черный по белому" class="chooseColor">Черный по белому</a></li>
+                  <li id="color2"><a rel="color2" href="javascript:;" title="Белый по черному" class="chooseColor">Белый по черному</a></li>
+                  <li id="color3"><a rel="color3" href="javascript:;" title="Черный по голубому" class="chooseColor">Черный по голубому</a></li>
+                </ul>
+                <p class="saveit"><a href="javascript:;" title="Вернуть стандартные настройки" class="default">Вернуть стандартные настройки</a><a href="javascript:;" title="Закрыть панель" class="closepopped">Закрыть панель</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page container">
+      <header>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="header-top"><a href="javascript:;" title="Сайты представительств" class="pull-left header-repres-sites">Сайты представительств</a>
+              <select data-width="fit" class="selectpicker lang pull-left">
+                <option>Русский язык</option>
+                <option>English</option>
+                <option>Deutch</option>
+                <option>Français					option Espaniol</option>
+              </select><a href="https://vladpetroff.github.io/rossotrud/public" title="Обычная версия сайта" class="pull-right"><span><i aria-hidden="true" class="fa fa-eye fa-lg"></i> Обычная версия сайта</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12"><a href="./" title="На главную страницу">
+              <div class="header-logo pull-left"><img src="./img/icons/rs-logo-mini.png" alt="Россотрудничество"></div></a>
+            <div class="header-text pull-left">
+              <h1>РОССОТРУДНИЧЕСТВО</h1>
+              <p>Федеральное агентство по делам Содружества Независимых <br>
+                государств, соотечественников, проживающих за рубежом,<br>
+                и по международному гуманитарному сотрудничеству
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="row">
+        <div class="col-xs-12">
+          <nav role="navigation" class="navigation">
+            <ul class="list-unstyled list-inline">
+              <li><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
+              <li class="active"><a href="activity.html" title="Деятельность">Деятельность</a></li>
+              <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
+              <li><a href="news.html" title="Новости">Новости</a></li>
+              <li><a href="contacts.html" title="Контакты">Контакты</a></li>
+            </ul>
+          </nav>
+          <div role="navigation" class="subnav"><a href="javascript:;" title="Содействие международному развитию">Содействие международному развитию</a><a href="javascript:;" title="Общественная дипломатия">Общественная дипломатия</a><a href="javascript:;" title="Продвижение русской культуры" class="active">Продвижение русской культуры</a><a href="javascript:;" title="Поддержка соотечественников">Поддержка соотечественников</a><a href="javascript:;" title="Укрепление позиций русского языка">Укрепление позиций русского языка</a><a href="javascript:;" title="Образование и наука">Образование и наука</a><a href="javascript:;" title="Сохрание историко-мемориальных памятников и мест погребения">Сохрание историко-мемориальных памятников и мест погребения</a><a href="javascript:;" title="Развитие международных связей субъектов РФ">Развитие международных связей субъектов РФ</a></div>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="row">
+          <div class="col-xs-12">
+            <ol class="breadcrumb">
+              <li><a href="./" title="Главная страница">Главная страница</a></li>
+              <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>Продвижение русской культуры</h1>
+            <p>Уникальность культуры каждого народа является не только его отличительным знаком, но и составляет феномен культурного многообразия человеческой цивилизации в целом. Культура России также является неотъемлемой ее частью.</p>
+            <p>Россия — страна, обладающая огромным культурным наследием и многовековыми культурными традициями. Исторические и географические особенности нашей страны способствовали тому, что Россия развивалась как государство, где сосуществовали и развивались множество культур, взаимодополняя друг друга. Именно эта характерная черта делает русскую культуру притягательной для иностранцев, которые на протяжении не одного столетия пытаются постичь загадочную «русскую душу».</p>
+            <p>Достижения России в области литературы, музыки, балета, театра, изобразительного искусства признаны во всем мире.</p>
+            <p>Русская литература является не только отражением эстетических, нравственных и духовных ценностей своего народа, но отличается глубоким психологизмом в изображении человеческих характеров. Произведения А. С. Пушкина, Ф. М. Достоевского, Л. Н. Толстого, А. П. Чехова, С. А. Есенина давно стали достоянием мировой литературы.</p>
+            <p>Русская классическая музыка дала миру такие имена, как П. И. Чайковский, М. И. Глинка, С. В. Рахманинов, И. Ф. Стравинский, С. С. Прокофьев, Д. Д. Шостакович.</p>
+            <p>Русское изобразительное искусство прославили многие художники, среди них В. А. Серов, В. И. Суриков, В. М. Васнецов, А. А. Иванов, К. З. Малевич, М. З. Шагал. Их картины — всегда желанные участники международных вернисажей.</p>
+            <p>Во всем мире заслуженным авторитетом и признанием пользуются русская театральная и балетная школа. По «системе К. С. Станиславского» работают многие театральные и киноактеры. В России работают театры, имеющие мировую славу, такие как Мариинский театр, Большой и Малый театры. Русский балет прославили Г. С. Уланова, М. М. Плисецкая, Р. Х. Нуриев, М. Н. Барышников. «Русские сезоны», а затем и «Русский балет» Сергея Дягилева неизменно собирали полные залы и были одним из крупнейших событий в мире культуры. В мировую историю оперы вписаны такие имена, как Ф. И. Шаляпин, С. Я. Лемешев, Г. П. Вишневская.</p>
+            <p>Российский кинематограф с момента возникновения был связан с историческими процессами, происходящими в стране и в мире в целом. Многие киноленты получали мировые награды, такие как Премия Академии кинематографических искусств и наук («Оскар»), награды Каннского международного кинофестиваля.  Классиками мирового кино стали фильмы С. М. Эйзенштейна «Броненосец „Потемкин“», Г. В. Александрова «Веселые ребята», И. А. Пырьева «Свинарка и пастух», С. Ф. Бондарчука «Война и мир», М. К. Калатозова «Летят журавли», А. А. Тарковского «Солярис», В. В. Меньшова «Москва слезам не верит», Н. С. Михалкова «Утомленные солнцем», П. С. Лунгина «Остров», А. К. Котта «Брестская крепость».</p>
+            <p>Одним из направлений деятельности Россотрудничества является представление культурного наследия России за ее пределами, а также содействие международному сотрудничеству в сфере культуры.</p>
+            <p>Россотрудничество поддерживает и реализует международные проекты в области культуры и искусства в соответствии с Основными направлениями политики Российской Федерации в сфере международного культурно-гуманитарного сотрудничества.</p>
+            <p>Агентство имеет 93 представительства в 80 странах мира, двери которых открыты для всех, кто активно интересуется Россией и российской культурой. На базе российских центров науки и культуры регулярно проходят различные мероприятия, направленные на популяризацию культуры народов России: концерты российских фольклорных, музыкальных и танцевальных коллективов; творческие встречи с известными российскими деятелями культуры; выставки современных художников; тематические фотовыставки архивных материалов российских музеев; кинопоказы последних достижений отечественной кинематографии; спектакли российских театров для взрослой и детской аудитории.</p>
+            <p>Россотрудничество принимает активное участие в Перекрестных годах России с зарубежными странами, а также проводит серии мероприятий за рубежом, приуроченных к памятным датам российской истории.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <nav role="navigation" class="navigation bottom">
+            <ul class="list-unstyled list-inline">
+              <li><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
+              <li class="active"><a href="activity.html" title="Деятельность">Деятельность</a></li>
+              <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
+              <li><a href="news.html" title="Новости">Новости</a></li>
+              <li><a href="contacts.html" title="Контакты">Контакты</a></li>
+            </ul>
+          </nav>
+          <div role="navigation" class="subnav"><a href="javascript:;" title="Содействие международному развитию">Содействие международному развитию</a><a href="javascript:;" title="Общественная дипломатия">Общественная дипломатия</a><a href="javascript:;" title="Продвижение русской культуры" class="active">Продвижение русской культуры</a><a href="javascript:;" title="Поддержка соотечественников">Поддержка соотечественников</a><a href="javascript:;" title="Укрепление позиций русского языка">Укрепление позиций русского языка</a><a href="javascript:;" title="Образование и наука">Образование и наука</a><a href="javascript:;" title="Сохрание историко-мемориальных памятников и мест погребения">Сохрание историко-мемориальных памятников и мест погребения</a><a href="javascript:;" title="Развитие международных связей субъектов РФ">Развитие международных связей субъектов РФ</a></div>
+        </div>
+      </div>
+      <footer>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="footer-social">
+              <p>Присоединяйтесь к нам в социальных сетях:</p>
+              <ul class="list-unstyled">
+                <li><a href="javascript:;" title="Фейсбук">Фейсбук</a></li>
+                <li><a href="javascript:;" title="Вконтакте">Вконтакте</a></li>
+                <li><a href="javascript:;" title="Инстраграм">Инстраграм</a></li>
+                <li><a href="javascript:;" title="YouTube">YouTube</a></li>
+                <li><a href="javascript:;" title="Твиттер">Твиттер</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="footer-copy">
+              <p>Федеральное агентство по делам Содружества Независимых государств, соотечественников, проживающих за рубежом, и по международному гуманитарному сотрудничеству</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>

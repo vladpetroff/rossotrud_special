@@ -1,0 +1,83 @@
+extends includes/template
+
+block title
+	title anons.html
+
+block prepend scripts
+	//script(src="./js/menu.js" defer)
+
+block content
+	.row
+		.col-xs-12
+			nav(role="navigation").navigation
+				ul.list-unstyled.list-inline
+					li: a(href="about.html" title="О Россотрудничестве") О Россотрудничестве
+					li: a(href="activity.html" title="Деятельность") Деятельность
+					li.active: a(href="anons.html" title="Анонсы") Анонсы
+					li: a(href="news.html" title="Новости") Новости
+					li: a(href="contacts.html" title="Контакты") Контакты
+
+	.content-block
+		.row
+			.col-xs-12
+				ol.breadcrumb
+					li: a(href="./", title="Главная страница") Главная страница
+
+		.row
+			.col-xs-12
+				h1 Анонсы
+
+				section.anons.row
+					article.col-xs-12
+						a(href="anonsDetail.html", title="Писатель горечи и гнева")
+							time 28 января 18:00
+							h3 Таджикистан, РЦНК в Душанбе
+							h2 Писатель горечи и гнева
+							h4 К 190-летию М. Е. Салтыкова-Щедрина
+
+					article.col-xs-12
+						a(href="anonsDetail.html", title="Азбука хорошего поведения")
+							time 28 января, 18:00
+							h3 Дания, РЦНК в Копенгагене #[br]На русском языке
+							h2 «Азбука хорошего поведения». Спектакль Ульяновского театра им. И. А. Гончарова
+
+					article.col-xs-12
+						a(href="anonsDetail.html", title="Другой человек")
+							time 30 января, 19:00
+							h3 Дания, РЦНК в Копенгагене #[br]На русском языке
+							h2 «Другой человек». Спектакль Ульяновского театра им. И. А. Гончарова
+
+					article.col-xs-12
+						a(href="anonsDetail.html", title="Концерт классической музыки в исполнении учащихся РССШИИ имени М. Атоева")
+							time 30 января, 19:00
+							h3 Таджикистан, РЦНК в Душанбе #[br]На русском языке
+							h2 Концерт классической музыки в исполнении учащихся РССШИИ имени М. Атоева
+							h4 К 5-летию подписания Соглашения об учреждении культурно-информационных центров России и Таджикистана
+
+					article.col-xs-12
+						a(href="anonsDetail.html", title="Выставка картин Николая Дулько, художника из Твери")
+							time 31 января — 12 февраля
+							h3 Дания, РЦНК в Копенгагене #[br]На русском языке
+							h2 Выставка картин Николая Дулько, художника из Твери
+							h4 К 190-летию М. Е. Салтыкова-Щедрина
+
+					article.col-xs-12
+						a(href="anonsDetail.html", title="Выставка «Россия — мировая научная держава»")
+							time 5–9 февраля
+							h3 Южная Осетия, РЦНК в Цхинвале
+							h2 Выставка «Россия — мировая научная держава»
+							h4 Ко Дню Российской науки
+
+					p.readmore.text-center.col-xs-12
+						a(href="javascript:;", title="Другие анонсы") Другие анонсы
+
+
+	.row
+		.col-xs-12
+			nav(role="navigation").navigation.bottom
+				ul.list-unstyled.list-inline
+					li: a(href="about.html" title="О Россотрудничестве") О Россотрудничестве
+					li: a(href="activity.html" title="Деятельность") Деятельность
+					li.active: a(href="anons.html" title="Анонсы") Анонсы
+					li: a(href="news.html" title="Новости") Новости
+					li: a(href="contacts.html" title="Контакты") Контакты

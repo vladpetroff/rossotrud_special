@@ -1,0 +1,54 @@
+extends includes/template
+
+block title
+	title about_programs.html
+
+block prepend scripts
+	//script(src="./js/menu.js" defer)
+
+block content
+	.row
+		.col-xs-12
+			nav(role="navigation").navigation
+				ul.list-unstyled.list-inline
+					li.active: a(href="about.html" title="О Россотрудничестве") О Россотрудничестве
+					li: a(href="activity.html" title="Деятельность") Деятельность
+					li: a(href="anons.html" title="Анонсы") Анонсы
+					li: a(href="news.html" title="Новости") Новости
+					li: a(href="contacts.html" title="Контакты") Контакты
+			.subnav(role="navigation")
+				a(href="about_programs.html", title="Государственные программы").active Государственные программы
+				a(href="about_structure.html", title="Структура") Структура
+				a(href="about_manage.html", title="Руководство") Руководство
+
+	.content-block
+		.row
+			.col-xs-12
+				ol.breadcrumb
+					li: a(href="./", title="Главная страница") Главная страница
+					li: a(href="about.html", title="О Россотрудничестве") О Россотрудничестве
+		.row
+			.col-xs-12
+				h1 Государственные программы
+				.list.row
+					ul.list-unstyled.col-xs-12
+						li: a(href="about_programs_strategy.html", title="Стратегические коммуникации российского содействия международному развитию") Стратегические коммуникации российского содействия международному развитию
+						li: a(href="javascript:;", title="Межгосударственная программа инновационного сотрудничества государств-участников СНГ") Межгосударственная программа инновационного сотрудничества государств-участников СНГ
+						li: a(href="javascript:;", title="«Новое поколение»: ознакомительные поездки в Россию для молодых представителей политических, общественных, научных и деловых кругов иностранных государств") «Новое поколение»: ознакомительные поездки в Россию для молодых представителей политических, общественных, научных и деловых кругов иностранных государств
+						li: a(href="javascript:;", title="Содействие добровольному переселению в Российскую Федерацию соотечественников, проживающих за рубежом") Содействие добровольному переселению в Российскую Федерацию соотечественников, проживающих за рубежом
+						li: a(href="javascript:;", title="Внешнеполитическая деятельность") Внешнеполитическая деятельность
+						li: a(href="about_programs_rulang.html", title="Русский язык") Русский язык
+
+	.row
+		.col-xs-12
+			nav(role="navigation").navigation.bottom
+				ul.list-unstyled.list-inline
+					li.active: a(href="about.html" title="О Россотрудничестве") О Россотрудничестве
+					li: a(href="activity.html" title="Деятельность") Деятельность
+					li: a(href="anons.html" title="Анонсы") Анонсы
+					li: a(href="news.html" title="Новости") Новости
+					li: a(href="contacts.html" title="Контакты") Контакты
+			.subnav(role="navigation")
+				a(href="about_programs.html", title="Государственные программы").active Государственные программы
+				a(href="about_structure.html", title="Структура") Структура
+				a(href="about_manage.html", title="Руководство") Руководство

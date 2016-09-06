@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--meta(name="viewport", content="width=device-width, initial-scale=1.0")-->
+    <title>contacts_inworld.html</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css" rel="stylesheet">
+    <!-- Чекбоксы и радио https://github.com/flatlogic/awesome-bootstrap-checkbox-->
+    <link href="./css/awesome-bootstrap-checkbox.css" rel="stylesheet"/>
+    <link href="./css/style.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- Modern behaviour for old browsers:-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.5/es5-shim.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+    <!--script(src="./js/menu.js" defer)-->
+    <!-- https://www.devbridge.com/sourcery/components/jquery-autocomplete/-->
+    <script src="./js/jquery.autocomplete.min.js" defer></script>
+    <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+    <!-- https://github.com/js-cookie/js-cookie-->
+    <script src="./js/js.cookie.js" defer></script>
+    <script src="./js/main.js" defer></script>
+  </head>
+</html>
+<body>
+  <div id="out" class="container-fluid">
+    <div id="settings" class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2 class="text_only">Настройки отображения</h2>
+            <div class="access">
+              <dl class="a-fontsize">
+                <dt>Размер шрифта</dt>
+                <dd><a href="javascript:;" title="Уменьшить размер" class="a-fontsize-small">A</a></dd>
+                <dd><a href="javascript:;" title="Увеличить шрифт" class="a-fontsize-big">A</a></dd>
+              </dl>
+              <dl class="a-colors">
+                <dt>Цвет</dt>
+                <dd><a id="a-color1" href="javascript:;" rel="color1" title="Черный по белому" class="chooseColor">Ц</a></dd>
+                <dd><a id="a-color2" href="javascript:;" rel="color2" title="Белый по черному" class="chooseColor">Ц</a></dd>
+                <dd><a id="a-color3" href="javascript:;" rel="color3" title="Черный по голубому" class="chooseColor">Ц</a></dd>
+              </dl>
+              <p class="a-settings">Настройки <a href="javascript:;" aria-hidden="true" title="Настройки" class="fa fa-cog fa-lg"></a></p>
+              <p class="a-search">Поиск <a href="search.html" aria-hidden="true" title="Страница поиска" class="fa fa-search"></a></p>
+              <div class="popped hidden">
+                <h2>Настройки шрифта:</h2>
+                <p class="choose-font-family"><span>Выберите шрифт</span><a id="sans-serif" rel="sans-serif" href="javascript:;" title="Arial" class="font-family">Arial</a><a id="serif" rel="serif" href="javascript:;" title="Times" class="font-family">Times New Roman</a></p>
+                <p class="choose-letter-spacing"><span>Интервал между буквами</span><a id="spacing-small" rel="spacing-small" href="javascript:;" title="Стандартный интервал" class="letter-spacing">Стандартный</a><a id="spacing-normal" rel="spacing-normal" href="javascript:;" title="Средний интервал" class="letter-spacing">Средний</a><a id="spacing-big" rel="spacing-big" href="javascript:;" title="Большой интервал" class="letter-spacing">Большой</a></p>
+                <h2>Выбор цветовой схемы:</h2>
+                <ul class="choose-colors">
+                  <li id="color1"><a rel="color1" href="javascript:;" title="Черный по белому" class="chooseColor">Черный по белому</a></li>
+                  <li id="color2"><a rel="color2" href="javascript:;" title="Белый по черному" class="chooseColor">Белый по черному</a></li>
+                  <li id="color3"><a rel="color3" href="javascript:;" title="Черный по голубому" class="chooseColor">Черный по голубому</a></li>
+                </ul>
+                <p class="saveit"><a href="javascript:;" title="Вернуть стандартные настройки" class="default">Вернуть стандартные настройки</a><a href="javascript:;" title="Закрыть панель" class="closepopped">Закрыть панель</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page container">
+      <header>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="header-top"><a href="javascript:;" title="Сайты представительств" class="pull-left header-repres-sites">Сайты представительств</a>
+              <select data-width="fit" class="selectpicker lang pull-left">
+                <option>Русский язык</option>
+                <option>English</option>
+                <option>Deutch</option>
+                <option>Français					option Espaniol</option>
+              </select><a href="https://vladpetroff.github.io/rossotrud/public" title="Обычная версия сайта" class="pull-right"><span><i aria-hidden="true" class="fa fa-eye fa-lg"></i> Обычная версия сайта</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12"><a href="./" title="На главную страницу">
+              <div class="header-logo pull-left"><img src="./img/icons/rs-logo-mini.png" alt="Россотрудничество"></div></a>
+            <div class="header-text pull-left">
+              <h1>РОССОТРУДНИЧЕСТВО</h1>
+              <p>Федеральное агентство по делам Содружества Независимых <br>
+                государств, соотечественников, проживающих за рубежом,<br>
+                и по международному гуманитарному сотрудничеству
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="row">
+        <div class="col-xs-12">
+          <nav role="navigation" class="navigation">
+            <ul class="list-unstyled list-inline">
+              <li><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
+              <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
+              <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
+              <li><a href="news.html" title="Новости">Новости</a></li>
+              <li class="active"><a href="contacts.html" title="Контакты">Контакты</a></li>
+            </ul>
+          </nav>
+          <div role="navigation" class="subnav"><a href="contacts_center.html" title="Центральный аппарат">Центральный аппарат</a><a href="contacts_inworld.html" title="Представительства в мире" class="active">Представительства в мире</a><a href="contacts_callback" title="Написать обращение">Написать обращение</a></div>
+        </div>
+      </div>
+      <div class="content-block">
+        <div class="row">
+          <div class="col-xs-12">
+            <ol class="breadcrumb">
+              <li><a href="./" title="Главная страница">Главная страница</a></li>
+              <li><a href="contacts.html" title="Контакты">Контакты</a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>Представительства в мире</h1>
+            <section class="contacts">
+              <h3>Страны СНГ, Абхазия и Южная Осетия</h3>
+              <div class="row">
+                <div class="col-xs-6">
+                  <h4>Абхазия</h4><a href="http://abh.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Сухуме</a>
+                  <h4>Азербайджан</h4><a href="http://aze.rs.gov.ru/" target="_blank">Российский информационно-культурный центр в Баку</a>
+                  <h4>Армения</h4><a href="http://arm.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Ереване</a>
+                  <h4>Белоруссия</h4><a href="http://blr-brest.rs.gov.ru/" target="_blank">Отделение Российского центра науки и культуры в Бресте</a><a href="http://blr.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Минске</a>
+                  <h4>Казахстан</h4><a href="http://kaz.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Астане</a>
+                </div>
+                <div class="col-xs-6">
+                  <h4>Киргизия</h4><a href="http://kgz.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Бишкеке</a>
+                  <h4>Молдавия</h4><a href="http://mda.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Кишиневе</a>
+                  <h4>Таджикистан</h4><a href="http://tjk.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Душанбе</a>
+                  <h4>Узбекистан</h4><a href="http://uzb.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Ташкенте</a>
+                  <h4>Украина</h4><a href="http://ukr-odessa.rs.gov.ru/" target="_blank">Представительство в Одессе</a><a href="http://ukr.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Киеве</a>
+                  <h4>Южная Осетия</h4><a href="http://rso.rs.gov.ru/" target="_blank">Цхинвале</a>
+                </div>
+              </div>
+              <h3>Европа</h3>
+              <div class="row">
+                <div class="col-xs-6">
+                  <h4>Австрия</h4><a href="http://www.russischeskulturinstitut.at/" target="_blank">Российский центр науки и культуры в Вене</a>
+                  <h4>Албания</h4><a href="http://prev.rs.gov.ru/pages/albaniya" target="_blank">Представительство в Тиране</a>
+                  <h4>Бельгия</h4><a href="http://bel.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Брюсселе</a>
+                  <h4>Болгария</h4><a href="http://rkic-bg.com/ru/" target="_blank">Российский культурно-информационный центр в Софии</a>
+                  <h4>Великобритания</h4><a href="chttp://gbr.rs.gov.ru/" target="_blank">Представительство в Лондоне</a>
+                  <h4>Венгрия</h4><a href="http://hun.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Будапеште</a>
+                  <h4>Германия</h4><a href="http://russisches-haus.de/de/" target="_blank">Российский центр науки и культуры в Берлине</a>
+                  <h4>Греция</h4><a href="http://www.rcnk.gr/" target="_blank">Российский центр науки и культуры в Афинах</a>
+                  <h4>Дания</h4><a href="http://ruscenter.dk/" target="_blank">Российский центр науки и культуры в Копенгагене</a>
+                  <h4>Испания</h4><a href="http://centroruso.info/" target="_blank">Российский центр науки и культуры в Мадриде</a>
+                  <h4>Италия</h4><a href="contacts_inworld_rome.html">Российский центр науки и культуры в Риме</a>
+                  <h4>Кипр</h4><a href="http://kyp.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Никосии</a>
+                  <h4>Люксембург</h4><a href="http://lux.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Люксембурге</a>
+                </div>
+                <div class="col-xs-6">
+                  <h4>Мальта</h4><a href="http://mlt.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Валлетте</a>
+                  <h4>Польша</h4><a href="http://www.ronik.org.pl/index.php/ru/" target="_blank">Российский центр науки и культуры в Варшаве</a><a href="http://www.russcentrum.pl/" target="_blank">Отделение Российского центра науки и культуры в Гданьске</a>
+                  <h4>Португалия</h4><a href="http://prt.rs.gov.ru/" target="_blank">Представительство в Лиссабоне</a>
+                  <h4>Румыния</h4><a href="http://rou.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Бухаресте</a>
+                  <h4>Сербия</h4><a href="http://ruskidom.rs/" target="_blank">Российский центр науки и культуры в Белграде</a>
+                  <h4>Словакия</h4><a href="http://www.rcvkba.sk/" target="_blank">Российский центр науки и культуры в Братиславе</a>
+                  <h4>Словения</h4><a href="http://tecajruscine.si/" target="_blank">Российский центр науки и культуры в Любляне</a>
+                  <h4>Финляндия</h4><a href="http://fin.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Хельсинки</a>
+                  <h4>Франция</h4><a href="http://www.russiefrance.org/" target="_blank">Российский центр науки и культуры в Париже</a>
+                  <h4>Хорватия</h4><a href="http://prev.rs.gov.ru/pages/horvatiya" target="_blank">Представительство в Загребе</a>
+                  <h4>Черногория</h4><a href="http://prev.rs.gov.ru/pages/chernogoriya" target="_blank">Представительство в Подгорице</a>
+                  <h4>Чехия</h4><a href="http://rsvk.cz/" target="_blank">Российский центр науки и культуры в Праге</a>
+                  <h4>Швейцария</h4><a href="http://che.rs.gov.ru/" target="_blank">Представительство в Берне</a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <nav role="navigation" class="navigation bottom">
+            <ul class="list-unstyled list-inline">
+              <li><a href="about.html" title="О Россотрудничестве">О Россотрудничестве</a></li>
+              <li><a href="activity.html" title="Деятельность">Деятельность</a></li>
+              <li><a href="anons.html" title="Анонсы">Анонсы</a></li>
+              <li><a href="news.html" title="Новости">Новости</a></li>
+              <li class="active"><a href="contacts.html" title="Контакты">Контакты</a></li>
+            </ul>
+          </nav>
+          <div role="navigation" class="subnav"><a href="contacts_center.html" title="Центральный аппарат">Центральный аппарат</a><a href="contacts_inworld.html" title="Представительства в мире" class="active">Представительства в мире</a><a href="contacts_callback" title="Написать обращение">Написать обращение</a></div>
+        </div>
+      </div>
+      <footer>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="footer-social">
+              <p>Присоединяйтесь к нам в социальных сетях:</p>
+              <ul class="list-unstyled">
+                <li><a href="javascript:;" title="Фейсбук">Фейсбук</a></li>
+                <li><a href="javascript:;" title="Вконтакте">Вконтакте</a></li>
+                <li><a href="javascript:;" title="Инстраграм">Инстраграм</a></li>
+                <li><a href="javascript:;" title="YouTube">YouTube</a></li>
+                <li><a href="javascript:;" title="Твиттер">Твиттер</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="footer-copy">
+              <p>Федеральное агентство по делам Содружества Независимых государств, соотечественников, проживающих за рубежом, и по международному гуманитарному сотрудничеству</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,48 @@
+extends includes/template
+
+block title
+	title anonsDetail.html
+
+block prepend scripts
+	//script(src="./js/menu.js" defer)
+
+block content
+	.row
+		.col-xs-12
+			nav(role="navigation").navigation
+				ul.list-unstyled.list-inline
+					li: a(href="about.html" title="О Россотрудничестве") О Россотрудничестве
+					li: a(href="activity.html" title="Деятельность") Деятельность
+					li.active: a(href="anons.html" title="Анонсы") Анонсы
+					li: a(href="news.html" title="Новости") Новости
+					li: a(href="contacts.html" title="Контакты") Контакты
+
+	.content-block
+		.row
+			.col-xs-12
+				ol.breadcrumb
+					li: a(href="./", title="Главная страница") Главная страница
+					li: a(href="anons.html", title="Анонсы") Анонсы
+
+		.row
+			.col-xs-12
+				h1 «Полет чайки: от Таганрога до Мадрида». Выставка документальных фотографий о жизни и творчестве А. П. Чехова
+
+				h5 Год России в Испании
+				h3 3–31 мая
+				h3 Испания, Высшая Королевская школа драматического искусства (РЕСАД)
+				address 28009 Испания, Мадрид, Авенида де Назарет, 2 #[br]Avenida de Nazaret 2. 28009 Madrid, España
+				p С 3 по 31 мая в Высшей Королевской школе драматического искусства (РЕСАД) в Мадриде пройдет выставка документальных фотографий «Полет чайки: от Таганрога до Мадрида» о жизни и творчестве русского писателя, прозаика, драматурга Антона Павловича Чехова.
+				p Организаторы — Высшая Королевская школа драматического искусства (РЕСАД), представительство Россотрудничества в Испании и Ассоциация студентов и выпускников российских вузов «Аэлерус».
+				p В выставке примут участие театральные коллективы, студенты театральных вузов, а также представители культурной общественности.
+
+
+	.row
+		.col-xs-12
+			nav(role="navigation").navigation.bottom
+				ul.list-unstyled.list-inline
+					li: a(href="about.html" title="О Россотрудничестве") О Россотрудничестве
+					li: a(href="activity.html" title="Деятельность") Деятельность
+					li.active: a(href="anons.html" title="Анонсы") Анонсы
+					li: a(href="news.html" title="Новости") Новости
+					li: a(href="contacts.html" title="Контакты") Контакты

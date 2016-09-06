@@ -113,6 +113,8 @@
 		}
 		if (target.classList.contains('default')) {
 			document.body.className = initialBodyClasses;
+			currentPageSize = 14;
+			resizeBlock.style = '';
 			Cookies.set('chooseColor', 'color1');
 			Cookies.set('letter-spacing', 'spacing-small');
 			Cookies.set('font-family', 'sans-serif');
