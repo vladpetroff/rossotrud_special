@@ -1,0 +1,93 @@
+extends includes/template
+
+block title
+	title contacts_callback.html
+
+block prepend scripts
+	//script(src="./js/menu.js" defer)
+
+block content
+	.row
+		.col-xs-12
+			nav(role="navigation").navigation
+				ul.list-unstyled.list-inline
+					li: a(href="about.html" title="О Россотрудничестве") О Россотрудничестве
+					li: a(href="activity.html" title="Деятельность") Деятельность
+					li: a(href="anons.html" title="Анонсы") Анонсы
+					li: a(href="news.html" title="Новости") Новости
+					li.active: a(href="contacts.html" title="Контакты") Контакты
+			.subnav(role="navigation")
+				a(href="contacts_center.html", title="Центральный аппарат") Центральный аппарат
+				a(href="contacts_inworld.html", title="Представительства в мире") Представительства в мире
+				a(href="contacts_callback.html", title="Написать обращение").active Написать обращение
+
+	.content-block
+		.row
+			.col-xs-12
+				ol.breadcrumb
+					li: a(href="./", title="Главная страница") Главная страница
+					li: a(href="contacts.html", title="Контакты") Контакты
+		.row
+			.col-xs-12
+				h1 Написать обращение
+
+				form(name='feedbackForm')#feedbackForm
+					.form-group
+						label.control-label(for='formGroupInputSurname') Фамилия
+						input#formGroupInputSurname.form-control.input-lg(type='text', placeholder='', maxlength="255").required
+					.form-group
+						label.control-label(for='formGroupInputName') Имя
+						input#formGroupInputName.form-control.input-lg(type='text', placeholder='', maxlength="255").required
+					.form-group
+						label.control-label(for='formGroupInputParentName') Отчество
+						input#formGroupInputParentName.form-control.input-lg(type='text', placeholder='', maxlength="255")
+					.form-group
+						label.control-label(for='formGroupInputEmail') Электронная почта
+						input#formGroupInputEmail.form-control.input-lg(type='text', placeholder='', maxlength="255").required
+					.form-group
+						label.control-label(for='formGroupInputPhone') Контактный телефон
+						input#formGroupInputPhone.form-control.input-lg(type='text', placeholder='', maxlength="255").required
+					.form-group
+						label.control-label(for='formGroupInputIndex') Почтовый индекс
+						input#formGroupInputIndex.form-control.input-lg(type='text', placeholder='', maxlength="255").required
+					.form-group
+						label.control-label(for='formGroupInputAddress') Почтовый адрес
+						input#formGroupInputAddress.form-control.input-lg(type='text', placeholder='Город, улица, квартира', maxlength="255").required
+					.form-group
+						label.control-label(for='formGroupInputTheme') Тема
+						input#formGroupInputTheme.form-control.input-lg(type='text', placeholder='Тема Вашего обращения', maxlength="255").required
+					.form-group
+						label.control-label(for='formGroupInputTextarea') Обращение
+						textarea(rows="5", placeholder="Может содержать не более 2000 знаков", maxlength="2000").required.form-control#formGroupInputTextarea
+						p.help-block.pull-right #[span#count 0]/2000
+					br
+					.form-group
+						label.control-label(for='formGroupInputFile') Документ
+						input(type="file", value="Выбрать файл", accept="image/*,audio/*,video/*,application/msword,application/rtf,application/vnd.ms-excel,application/pdf,text/plain,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")#formGroupInputFile.btn.btn-default.btn-lg
+						br
+						p.help-block Вы можете прикрепить к обращению файл размером не более 5 Мб.
+						p.help-block Допустимы следующие форматы: avi, bmp, doc, docx, flw, gif, jpg, mkv, mov, mp3, mp4, pcx, pdf, png, pps, ppt, pptx, rtf, tif, txt, xls, xlsx, wma, wmv, wma.
+					.form-group.agreed
+						label.control-label.hidden-xs
+						.checkbox
+							input(type="checkbox" id="agreed" name='agreed')
+							label(for="agreed").control-label Я прочитал и #[a(href="javascript:;") принимаю правила рассмотрения электронных обращений граждан]
+					.form-group
+						button(type="submit" disabled name="submitFeedback").btn.btn-default.btn-lg: strong Отправить
+
+
+
+
+	.row
+		.col-xs-12
+			nav(role="navigation").navigation.bottom
+				ul.list-unstyled.list-inline
+					li: a(href="about.html" title="О Россотрудничестве") О Россотрудничестве
+					li: a(href="activity.html" title="Деятельность") Деятельность
+					li: a(href="anons.html" title="Анонсы") Анонсы
+					li: a(href="news.html" title="Новости") Новости
+					li.active: a(href="contacts.html" title="Контакты") Контакты
+			.subnav(role="navigation")
+				a(href="contacts_center.html", title="Центральный аппарат") Центральный аппарат
+				a(href="contacts_inworld.html", title="Представительства в мире") Представительства в мире
+				a(href="contacts_callback.html", title="Написать обращение").active Написать обращение

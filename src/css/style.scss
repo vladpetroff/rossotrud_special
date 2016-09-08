@@ -608,6 +608,15 @@ body {
       }
     } // content-block
 
+    .form-group {
+      .help-block {
+        color: #fff;
+      }
+      .checkbox label::before {
+        opacity: 1;
+      }
+    }
+
     .bootstrap-select {
       .btn-default:active:hover,
       .btn-default:active:focus,
@@ -741,6 +750,13 @@ body {
         background-color: $blue;
       }
     } // content-block
+
+    .form-group {
+      .checkbox label::before {
+        background-color: $blue;
+        opacity: 1;
+      }
+    }
 
     .bootstrap-select {
       &.btn-group {

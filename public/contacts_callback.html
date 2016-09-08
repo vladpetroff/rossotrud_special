@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--meta(name="viewport", content="width=device-width, initial-scale=1.0")-->
-    <title>contacts_inworld.html</title>
+    <title>contacts_callback.html</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Элементы форм  http://silviomoreto.github.io/bootstrap-select/-->
@@ -104,7 +104,7 @@
               <li class="active"><a href="contacts.html" title="Контакты">Контакты</a></li>
             </ul>
           </nav>
-          <div role="navigation" class="subnav"><a href="contacts_center.html" title="Центральный аппарат">Центральный аппарат</a><a href="contacts_inworld.html" title="Представительства в мире" class="active">Представительства в мире</a><a href="contacts_callback.html" title="Написать обращение">Написать обращение</a></div>
+          <div role="navigation" class="subnav"><a href="contacts_center.html" title="Центральный аппарат">Центральный аппарат</a><a href="contacts_inworld.html" title="Представительства в мире">Представительства в мире</a><a href="contacts_callback.html" title="Написать обращение" class="active">Написать обращение</a></div>
         </div>
       </div>
       <div class="content-block">
@@ -118,60 +118,62 @@
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <h1>Представительства в мире</h1>
-            <section class="contacts">
-              <h3>Страны СНГ, Абхазия и Южная Осетия</h3>
-              <div class="row">
-                <div class="col-xs-6">
-                  <h4>Абхазия</h4><a href="http://abh.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Сухуме</a>
-                  <h4>Азербайджан</h4><a href="http://aze.rs.gov.ru/" target="_blank">Российский информационно-культурный центр в Баку</a>
-                  <h4>Армения</h4><a href="http://arm.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Ереване</a>
-                  <h4>Белоруссия</h4><a href="http://blr-brest.rs.gov.ru/" target="_blank">Отделение Российского центра науки и культуры в Бресте</a><a href="http://blr.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Минске</a>
-                  <h4>Казахстан</h4><a href="http://kaz.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Астане</a>
-                </div>
-                <div class="col-xs-6">
-                  <h4>Киргизия</h4><a href="http://kgz.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Бишкеке</a>
-                  <h4>Молдавия</h4><a href="http://mda.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Кишиневе</a>
-                  <h4>Таджикистан</h4><a href="http://tjk.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Душанбе</a>
-                  <h4>Узбекистан</h4><a href="http://uzb.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Ташкенте</a>
-                  <h4>Украина</h4><a href="http://ukr-odessa.rs.gov.ru/" target="_blank">Представительство в Одессе</a><a href="http://ukr.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Киеве</a>
-                  <h4>Южная Осетия</h4><a href="http://rso.rs.gov.ru/" target="_blank">Цхинвале</a>
+            <h1>Написать обращение</h1>
+            <form name="feedbackForm" id="feedbackForm">
+              <div class="form-group">
+                <label for="formGroupInputSurname" class="control-label">Фамилия</label>
+                <input id="formGroupInputSurname" type="text" placeholder="" maxlength="255" class="form-control input-lg required">
+              </div>
+              <div class="form-group">
+                <label for="formGroupInputName" class="control-label">Имя</label>
+                <input id="formGroupInputName" type="text" placeholder="" maxlength="255" class="form-control input-lg required">
+              </div>
+              <div class="form-group">
+                <label for="formGroupInputParentName" class="control-label">Отчество</label>
+                <input id="formGroupInputParentName" type="text" placeholder="" maxlength="255" class="form-control input-lg">
+              </div>
+              <div class="form-group">
+                <label for="formGroupInputEmail" class="control-label">Электронная почта</label>
+                <input id="formGroupInputEmail" type="text" placeholder="" maxlength="255" class="form-control input-lg required">
+              </div>
+              <div class="form-group">
+                <label for="formGroupInputPhone" class="control-label">Контактный телефон</label>
+                <input id="formGroupInputPhone" type="text" placeholder="" maxlength="255" class="form-control input-lg required">
+              </div>
+              <div class="form-group">
+                <label for="formGroupInputIndex" class="control-label">Почтовый индекс</label>
+                <input id="formGroupInputIndex" type="text" placeholder="" maxlength="255" class="form-control input-lg required">
+              </div>
+              <div class="form-group">
+                <label for="formGroupInputAddress" class="control-label">Почтовый адрес</label>
+                <input id="formGroupInputAddress" type="text" placeholder="Город, улица, квартира" maxlength="255" class="form-control input-lg required">
+              </div>
+              <div class="form-group">
+                <label for="formGroupInputTheme" class="control-label">Тема</label>
+                <input id="formGroupInputTheme" type="text" placeholder="Тема Вашего обращения" maxlength="255" class="form-control input-lg required">
+              </div>
+              <div class="form-group">
+                <label for="formGroupInputTextarea" class="control-label">Обращение</label>
+                <textarea rows="5" placeholder="Может содержать не более 2000 знаков" maxlength="2000" id="formGroupInputTextarea" class="required form-control"></textarea>
+                <p class="help-block pull-right"><span id="count">0</span>/2000</p>
+              </div><br>
+              <div class="form-group">
+                <label for="formGroupInputFile" class="control-label">Документ</label>
+                <input type="file" value="Выбрать файл" accept="image/*,audio/*,video/*,application/msword,application/rtf,application/vnd.ms-excel,application/pdf,text/plain,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" id="formGroupInputFile" class="btn btn-default btn-lg"><br>
+                <p class="help-block">Вы можете прикрепить к обращению файл размером не более 5 Мб.</p>
+                <p class="help-block">Допустимы следующие форматы: avi, bmp, doc, docx, flw, gif, jpg, mkv, mov, mp3, mp4, pcx, pdf, png, pps, ppt, pptx, rtf, tif, txt, xls, xlsx, wma, wmv, wma.</p>
+              </div>
+              <div class="form-group agreed">
+                <label class="control-label hidden-xs"></label>
+                <div class="checkbox">
+                  <input type="checkbox" id="agreed" name="agreed">
+                  <label for="agreed" class="control-label">Я прочитал и <a href="javascript:;">принимаю правила рассмотрения электронных обращений граждан</a></label>
                 </div>
               </div>
-              <h3>Европа</h3>
-              <div class="row">
-                <div class="col-xs-6">
-                  <h4>Австрия</h4><a href="http://www.russischeskulturinstitut.at/" target="_blank">Российский центр науки и культуры в Вене</a>
-                  <h4>Албания</h4><a href="http://prev.rs.gov.ru/pages/albaniya" target="_blank">Представительство в Тиране</a>
-                  <h4>Бельгия</h4><a href="http://bel.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Брюсселе</a>
-                  <h4>Болгария</h4><a href="http://rkic-bg.com/ru/" target="_blank">Российский культурно-информационный центр в Софии</a>
-                  <h4>Великобритания</h4><a href="chttp://gbr.rs.gov.ru/" target="_blank">Представительство в Лондоне</a>
-                  <h4>Венгрия</h4><a href="http://hun.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Будапеште</a>
-                  <h4>Германия</h4><a href="http://russisches-haus.de/de/" target="_blank">Российский центр науки и культуры в Берлине</a>
-                  <h4>Греция</h4><a href="http://www.rcnk.gr/" target="_blank">Российский центр науки и культуры в Афинах</a>
-                  <h4>Дания</h4><a href="http://ruscenter.dk/" target="_blank">Российский центр науки и культуры в Копенгагене</a>
-                  <h4>Испания</h4><a href="http://centroruso.info/" target="_blank">Российский центр науки и культуры в Мадриде</a>
-                  <h4>Италия</h4><a href="contacts_inworld_rome.html">Российский центр науки и культуры в Риме</a>
-                  <h4>Кипр</h4><a href="http://kyp.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Никосии</a>
-                  <h4>Люксембург</h4><a href="http://lux.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Люксембурге</a>
-                </div>
-                <div class="col-xs-6">
-                  <h4>Мальта</h4><a href="http://mlt.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Валлетте</a>
-                  <h4>Польша</h4><a href="http://www.ronik.org.pl/index.php/ru/" target="_blank">Российский центр науки и культуры в Варшаве</a><a href="http://www.russcentrum.pl/" target="_blank">Отделение Российского центра науки и культуры в Гданьске</a>
-                  <h4>Португалия</h4><a href="http://prt.rs.gov.ru/" target="_blank">Представительство в Лиссабоне</a>
-                  <h4>Румыния</h4><a href="http://rou.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Бухаресте</a>
-                  <h4>Сербия</h4><a href="http://ruskidom.rs/" target="_blank">Российский центр науки и культуры в Белграде</a>
-                  <h4>Словакия</h4><a href="http://www.rcvkba.sk/" target="_blank">Российский центр науки и культуры в Братиславе</a>
-                  <h4>Словения</h4><a href="http://tecajruscine.si/" target="_blank">Российский центр науки и культуры в Любляне</a>
-                  <h4>Финляндия</h4><a href="http://fin.rs.gov.ru/" target="_blank">Российский центр науки и культуры в Хельсинки</a>
-                  <h4>Франция</h4><a href="http://www.russiefrance.org/" target="_blank">Российский центр науки и культуры в Париже</a>
-                  <h4>Хорватия</h4><a href="http://prev.rs.gov.ru/pages/horvatiya" target="_blank">Представительство в Загребе</a>
-                  <h4>Черногория</h4><a href="http://prev.rs.gov.ru/pages/chernogoriya" target="_blank">Представительство в Подгорице</a>
-                  <h4>Чехия</h4><a href="http://rsvk.cz/" target="_blank">Российский центр науки и культуры в Праге</a>
-                  <h4>Швейцария</h4><a href="http://che.rs.gov.ru/" target="_blank">Представительство в Берне</a>
-                </div>
+              <div class="form-group">
+                <button type="submit" disabled name="submitFeedback" class="btn btn-default btn-lg"><strong>Отправить</strong></button>
               </div>
-            </section>
+            </form>
           </div>
         </div>
       </div>
@@ -186,7 +188,7 @@
               <li class="active"><a href="contacts.html" title="Контакты">Контакты</a></li>
             </ul>
           </nav>
-          <div role="navigation" class="subnav"><a href="contacts_center.html" title="Центральный аппарат">Центральный аппарат</a><a href="contacts_inworld.html" title="Представительства в мире" class="active">Представительства в мире</a><a href="contacts_callback.html" title="Написать обращение">Написать обращение</a></div>
+          <div role="navigation" class="subnav"><a href="contacts_center.html" title="Центральный аппарат">Центральный аппарат</a><a href="contacts_inworld.html" title="Представительства в мире">Представительства в мире</a><a href="contacts_callback.html" title="Написать обращение" class="active">Написать обращение</a></div>
         </div>
       </div>
       <footer>
