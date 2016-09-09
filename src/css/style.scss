@@ -26,10 +26,11 @@ header {
   .header-logo {
     margin-top: 20px;
     margin-right: 20px;
-    img {
-      width: 80px;
-      height: 80px;
-    }
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    float:left;
+    background: url("../img/icons/rs-logo-mini.png") no-repeat ;
   }
   .header-text {
     width: 610px;
@@ -480,10 +481,13 @@ body {
 
     header {
       .header-top {
-        border-color: #fff;
+        border-color: $gray-lighter;
         a {
           color: #fff;
         }
+      }
+      .header-logo {
+        background: url("../img/icons/rs-logo-mini_white.png") no-repeat ;
       }
     }
 
@@ -496,7 +500,10 @@ body {
         color: #fff;
       }
       .footer-social {
-        border-color: #fff;
+        border-color: $gray-lighter;
+      }
+      .footer-copy {
+        background: url("../img/icons/ic-copyright-white-24-px.png") no-repeat left 5px;
       }
     }
 
@@ -513,7 +520,7 @@ body {
     }
 
     nav.navigation {
-      border-color: #fff;
+      border-color: $gray-lighter;
       ul {
         li {
           &.active {
@@ -711,12 +718,21 @@ body {
           background-repeat: no-repeat;
           height: 39px;
           line-height: 32px;
-          background-image: url("../img/helpers/color_rectangle-black.png");
+          background-image: url("../img/helpers/color_rectangle-black2.png");
         }
       }
       .a-settings a,
       .a-search a {
         color: #fff;
+      }
+      .a-fontsize {
+        dd {
+          background-color: #000;
+          border-color: #fff;
+          a {
+            color: #fff;
+          }
+        }
       }
     }
 

@@ -1327,7 +1327,7 @@ a.bg-danger:focus {
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 20px;
-  border-bottom: 1px solid #eeeeee; }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.38); }
 
 ul,
 ol {
@@ -1397,7 +1397,7 @@ blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
   font-size: 17.5px;
-  border-left: 5px solid #eeeeee; }
+  border-left: 5px solid rgba(255, 255, 255, 0.38); }
   blockquote p:last-child,
   blockquote ul:last-child,
   blockquote ol:last-child {
@@ -1418,7 +1418,7 @@ blockquote {
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  border-right: 5px solid #eeeeee;
+  border-right: 5px solid rgba(255, 255, 255, 0.38);
   border-left: 0;
   text-align: right; }
   .blockquote-reverse footer:before,
@@ -2320,7 +2320,7 @@ output {
     background-color: transparent; }
   .form-control[disabled], .form-control[readonly],
   fieldset[disabled] .form-control {
-    background-color: #eeeeee;
+    background-color: rgba(255, 255, 255, 0.38);
     opacity: 1; }
   .form-control[disabled],
   fieldset[disabled] .form-control {
@@ -3456,7 +3456,7 @@ tbody.collapse.in {
   line-height: 1;
   color: #000;
   text-align: center;
-  background-color: #eeeeee;
+  background-color: rgba(255, 255, 255, 0.38);
   border: 1px solid #000;
   border-radius: 4px; }
   .input-group-addon.input-sm,
@@ -3537,7 +3537,7 @@ tbody.collapse.in {
       padding: 10px 15px; }
       .nav > li > a:hover, .nav > li > a:focus {
         text-decoration: none;
-        background-color: #eeeeee; }
+        background-color: rgba(255, 255, 255, 0.38); }
     .nav > li.disabled > a {
       color: rgba(0, 0, 0, 0.54); }
       .nav > li.disabled > a:hover, .nav > li.disabled > a:focus {
@@ -3546,7 +3546,7 @@ tbody.collapse.in {
         background-color: transparent;
         cursor: not-allowed; }
   .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-    background-color: #eeeeee;
+    background-color: rgba(255, 255, 255, 0.38);
     border-color: #000; }
   .nav .nav-divider {
     height: 1px;
@@ -3567,7 +3567,7 @@ tbody.collapse.in {
       border: 1px solid transparent;
       border-radius: 4px 4px 0 0; }
       .nav-tabs > li > a:hover {
-        border-color: #eeeeee #eeeeee #ddd; }
+        border-color: rgba(255, 255, 255, 0.38) rgba(255, 255, 255, 0.38) #ddd; }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       color: rgba(0, 0, 0, 0.38);
       background-color: #fff;
@@ -4082,7 +4082,7 @@ tbody.collapse.in {
   .pagination > li > span:focus {
     z-index: 2;
     color: rgba(0, 0, 0, 0.87);
-    background-color: #eeeeee;
+    background-color: rgba(255, 255, 255, 0.38);
     border-color: #ddd; }
   .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus,
   .pagination > .active > span,
@@ -4158,7 +4158,7 @@ tbody.collapse.in {
     .pager li > a:hover,
     .pager li > a:focus {
       text-decoration: none;
-      background-color: #eeeeee; }
+      background-color: rgba(255, 255, 255, 0.38); }
   .pager .next > a,
   .pager .next > span {
     float: right; }
@@ -4268,7 +4268,7 @@ a.badge:hover, a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eeeeee; }
+  background-color: rgba(255, 255, 255, 0.38); }
   .jumbotron h1,
   .jumbotron .h1 {
     color: inherit; }
@@ -4277,7 +4277,7 @@ a.badge:hover, a.badge:focus {
     font-size: 21px;
     font-weight: 200; }
   .jumbotron > hr {
-    border-top-color: #d5d5d5; }
+    border-top-color: rgba(230, 230, 230, 0.38); }
   .container .jumbotron,
   .container-fluid .jumbotron {
     border-radius: 6px;
@@ -4529,7 +4529,7 @@ button.list-group-item {
   text-align: left; }
 
 .list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus {
-  background-color: #eeeeee;
+  background-color: rgba(255, 255, 255, 0.38);
   color: rgba(0, 0, 0, 0.54);
   cursor: not-allowed; }
   .list-group-item.disabled .list-group-item-heading, .list-group-item.disabled:hover .list-group-item-heading, .list-group-item.disabled:focus .list-group-item-heading {
@@ -5781,10 +5781,12 @@ header .header-top {
 
 header .header-logo {
   margin-top: 20px;
-  margin-right: 20px; }
-  header .header-logo img {
-    width: 80px;
-    height: 80px; }
+  margin-right: 20px;
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  float: left;
+  background: url("../img/icons/rs-logo-mini.png") no-repeat; }
 
 header .header-text {
   width: 610px;
@@ -6092,15 +6094,19 @@ body {
     color: #fff;
     border-color: #fff; }
     body.color2 header .header-top {
-      border-color: #fff; }
+      border-color: rgba(255, 255, 255, 0.38); }
       body.color2 header .header-top a {
         color: #fff; }
+    body.color2 header .header-logo {
+      background: url("../img/icons/rs-logo-mini_white.png") no-repeat; }
     body.color2 footer {
       color: #fff; }
       body.color2 footer a {
         color: #fff; }
       body.color2 footer .footer-social {
-        border-color: #fff; }
+        border-color: rgba(255, 255, 255, 0.38); }
+      body.color2 footer .footer-copy {
+        background: url("../img/icons/ic-copyright-white-24-px.png") no-repeat left 5px; }
     body.color2 .btn.btn-default {
       color: #fff; }
     body.color2 .dropdown-menu {
@@ -6108,7 +6114,7 @@ body {
       border-color: #fff;
       color: #fff; }
     body.color2 nav.navigation {
-      border-color: #fff; }
+      border-color: rgba(255, 255, 255, 0.38); }
       body.color2 nav.navigation ul li.active {
         border-color: #fff; }
       body.color2 nav.navigation ul li a {
@@ -6226,10 +6232,15 @@ body {
         background-repeat: no-repeat;
         height: 39px;
         line-height: 32px;
-        background-image: url("../img/helpers/color_rectangle-black.png"); }
+        background-image: url("../img/helpers/color_rectangle-black2.png"); }
       body.color2 .access .a-settings a,
       body.color2 .access .a-search a {
         color: #fff; }
+      body.color2 .access .a-fontsize dd {
+        background-color: #000;
+        border-color: #fff; }
+        body.color2 .access .a-fontsize dd a {
+          color: #fff; }
   body.color3 {
     background: #9dcfff;
     color: #000; }
