@@ -63,8 +63,9 @@ block content
 					br
 					.form-group
 						label.control-label(for='formGroupInputFile') Документ
-						input(type="file", value="Выбрать файл", accept="image/*,audio/*,video/*,application/msword,application/rtf,application/vnd.ms-excel,application/pdf,text/plain,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")#formGroupInputFile.btn.btn-default.btn-lg
-						br
+						.choose-file
+							button(type="button").btn.btn-default.btn-lg Выбрать файл
+							input(type="file", value="Выбрать файл", accept="image/*,audio/*,video/*,application/msword,application/rtf,application/vnd.ms-excel,application/pdf,text/plain,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")#formGroupInputFile.btn.btn-default.btn-lg
 						p.help-block Вы можете прикрепить к обращению файл размером не более 5 Мб.
 						p.help-block Допустимы следующие форматы: avi, bmp, doc, docx, flw, gif, jpg, mkv, mov, mp3, mp4, pcx, pdf, png, pps, ppt, pptx, rtf, tif, txt, xls, xlsx, wma, wmv, wma.
 					.form-group.agreed
@@ -73,7 +74,7 @@ block content
 							input(type="checkbox" id="agreed" name='agreed')
 							label(for="agreed").control-label Я прочитал и #[a(href="javascript:;") принимаю правила рассмотрения электронных обращений граждан]
 					.form-group
-						button(type="submit" disabled name="submitFeedback").btn.btn-default.btn-lg: strong Отправить
+						button(type="submit" disabled name="submitFeedback").btn.btn-default.btn-lg Отправить
 
 
 

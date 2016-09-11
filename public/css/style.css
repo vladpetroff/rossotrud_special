@@ -2781,6 +2781,21 @@ select[multiple].input-lg,
     padding-top: 6px;
     font-size: 12px; } }
 
+#feedbackForm .btn-lg, #feedbackForm .btn-group-lg > .btn {
+  border-width: 1px; }
+
+#feedbackForm .choose-file {
+  position: relative;
+  margin-bottom: 15px; }
+  #feedbackForm .choose-file input[type="file"] {
+    position: absolute;
+    width: 200px;
+    height: 48px;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    cursor: pointer; }
+
 .btn {
   display: inline-block;
   margin-bottom: 0;

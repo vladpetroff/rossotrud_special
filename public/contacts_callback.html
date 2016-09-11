@@ -158,7 +158,10 @@
               </div><br>
               <div class="form-group">
                 <label for="formGroupInputFile" class="control-label">Документ</label>
-                <input type="file" value="Выбрать файл" accept="image/*,audio/*,video/*,application/msword,application/rtf,application/vnd.ms-excel,application/pdf,text/plain,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" id="formGroupInputFile" class="btn btn-default btn-lg"><br>
+                <div class="choose-file">
+                  <button type="button" class="btn btn-default btn-lg">Выбрать файл</button>
+                  <input type="file" value="Выбрать файл" accept="image/*,audio/*,video/*,application/msword,application/rtf,application/vnd.ms-excel,application/pdf,text/plain,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" id="formGroupInputFile" class="btn btn-default btn-lg">
+                </div>
                 <p class="help-block">Вы можете прикрепить к обращению файл размером не более 5 Мб.</p>
                 <p class="help-block">Допустимы следующие форматы: avi, bmp, doc, docx, flw, gif, jpg, mkv, mov, mp3, mp4, pcx, pdf, png, pps, ppt, pptx, rtf, tif, txt, xls, xlsx, wma, wmv, wma.</p>
               </div>
@@ -170,7 +173,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <button type="submit" disabled name="submitFeedback" class="btn btn-default btn-lg"><strong>Отправить</strong></button>
+                <button type="submit" disabled name="submitFeedback" class="btn btn-default btn-lg">Отправить</button>
               </div>
             </form>
           </div>
